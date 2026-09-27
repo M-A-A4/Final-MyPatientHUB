@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Final-MyPatientHUB/static/css/main.2fe39f22.css",
-    "main.js": "/Final-MyPatientHUB/static/js/main.72c79728.js",
+    "main.js": "/Final-MyPatientHUB/static/js/main.e759528a.js",
     "static/js/453.1e67de7d.chunk.js": "/Final-MyPatientHUB/static/js/453.1e67de7d.chunk.js",
     "static/media/hello.jpeg": "/Final-MyPatientHUB/static/media/hello.6f18032d791809077157.jpeg",
     "static/media/pink.jpg": "/Final-MyPatientHUB/static/media/pink.371bd89ca226e9dbd9c9.jpg",
     "index.html": "/Final-MyPatientHUB/index.html",
     "main.2fe39f22.css.map": "/Final-MyPatientHUB/static/css/main.2fe39f22.css.map",
-    "main.72c79728.js.map": "/Final-MyPatientHUB/static/js/main.72c79728.js.map",
+    "main.e759528a.js.map": "/Final-MyPatientHUB/static/js/main.e759528a.js.map",
     "453.1e67de7d.chunk.js.map": "/Final-MyPatientHUB/static/js/453.1e67de7d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2fe39f22.css",
-    "static/js/main.72c79728.js"
+    "static/js/main.e759528a.js"
   ]
 }
