@@ -39,82 +39,82 @@ function DoctorList() {
 
         <section className="service-section">
 
-          <h2>Available Doctors</h2>
+  <h2>Available Doctors</h2>
 
-          <div className="doctor-list">
+  <div className="doctor-list">
 
-            <div className="doctor-card">
+    <div className="doctor-card">
 
-              <img
-                src="/images/d1.jpg"
-                alt="Doctor 1"
-              />
+      <img
+        src={process.env.PUBLIC_URL + "/images/d1.jpg"}
+        alt="Doctor 1"
+      />
 
-              <div className="doctor-info">
-                <h3>Doctor 1</h3>
+      <div className="doctor-info">
+        <h3>Doctor 1</h3>
 
-                <p>
-                  <i className="fa-solid fa-heart-pulse"></i>
-                  Cardiology
-                </p>
+        <p>
+          <i className="fa-solid fa-heart-pulse"></i>
+          Cardiology
+        </p>
 
-                <p>
-                  <i className="fa-solid fa-location-dot"></i>
-                  Medical Center
-                </p>
-              </div>
+        <p>
+          <i className="fa-solid fa-location-dot"></i>
+          Medical Center
+        </p>
+      </div>
 
-            </div>
+    </div>
 
-            <div className="doctor-card">
+    <div className="doctor-card">
 
-              <img
-                src="/images/d2.jpg"
-                alt="Doctor 2"
-              />
+      <img
+        src={process.env.PUBLIC_URL + "/images/d2.jpg"}
+        alt="Doctor 2"
+      />
 
-              <div className="doctor-info">
-                <h3>Doctor 2</h3>
+      <div className="doctor-info">
+        <h3>Doctor 2</h3>
 
-                <p>
-                  <i className="fa-solid fa-brain"></i>
-                  Neurology
-                </p>
+        <p>
+          <i className="fa-solid fa-brain"></i>
+          Neurology
+        </p>
 
-                <p>
-                  <i className="fa-solid fa-location-dot"></i>
-                  Medical Center
-                </p>
-              </div>
+        <p>
+          <i className="fa-solid fa-location-dot"></i>
+          Medical Center
+        </p>
+      </div>
 
-            </div>
+    </div>
 
-            <div className="doctor-card">
+    <div className="doctor-card">
 
-              <img
-                src="/images/d3.jpg"
-                alt="Doctor 3"
-              />
+      <img
+        src={process.env.PUBLIC_URL + "/images/d3.jpg"}
+        alt="Doctor 3"
+      />
 
-              <div className="doctor-info">
-                <h3>Doctor 3</h3>
+      <div className="doctor-info">
+        <h3>Doctor 3</h3>
 
-                <p>
-                  <i className="fa-solid fa-tooth"></i>
-                  Dentistry
-                </p>
+        <p>
+          <i className="fa-solid fa-tooth"></i>
+          Dentistry
+        </p>
 
-                <p>
-                  <i className="fa-solid fa-location-dot"></i>
-                  Medical Center
-                </p>
-              </div>
+        <p>
+          <i className="fa-solid fa-location-dot"></i>
+          Medical Center
+        </p>
+      </div>
 
-            </div>
+    </div>
 
-          </div>
+  </div>
 
-        </section>
+</section>
 
         <Footer />
 

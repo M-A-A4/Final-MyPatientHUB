@@ -88,10 +88,10 @@ function FindClinicList() {
 
       <div className="clinic-card">
 
-        <img
-          src="/images/area1.jpg"
-          alt="Clinic 1"
-        />
+      <img
+        src={`${process.env.PUBLIC_URL}/images/area1.jpg`}
+        alt="Clinic 1"
+      />
 
         <div className="clinic-info">
 
@@ -121,10 +121,10 @@ function FindClinicList() {
 
       <div className="clinic-card">
 
-        <img
-          src="/images/area2.jpg"
-          alt="Clinic 2"
-        />
+       <img
+        src={`${process.env.PUBLIC_URL}/images/area2.jpg`}
+        alt="Clinic 2"
+       />
 
         <div className="clinic-info">
 

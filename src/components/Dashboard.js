@@ -20,23 +20,23 @@ function Dashboard() {
   };
 
   const cards = [
-    {
-      title: "Promotion by Clinics",
-      image: "/images/one.jpeg",
-    },
-    {
-      title: "Promotion by Pharmacies",
-      image: "/images/two.jpeg",
-    },
-    {
-      title: "Smart Market Use by App",
-      image: "/images/three.jpeg",
-    },
-    {
-      title: "Health Index",
-      image: "/images/four.jpeg",
-    },
-  ];
+  {
+    title: "Promotion by Clinics",
+    image: process.env.PUBLIC_URL + "/images/one.jpeg",
+  },
+  {
+    title: "Promotion by Pharmacies",
+    image: process.env.PUBLIC_URL + "/images/two.jpeg",
+  },
+  {
+    title: "Smart Market Use by App",
+    image: process.env.PUBLIC_URL + "/images/three.jpeg",
+  },
+  {
+    title: "Health Index",
+    image: process.env.PUBLIC_URL + "/images/four.jpeg",
+  },
+];
 
   return (
     <div className="dashboard-container">

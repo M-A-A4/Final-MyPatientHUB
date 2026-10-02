@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -115,13 +115,13 @@ function Login() {
 
         <div className="footer-links">
 
-          <a href="/dashboard">
+          <Link to="/dashboard">
             MyPatientHUB
-          </a>
+          </Link>
 
-          <a href="/login">
+          <Link to="/login">
             About Us
-          </a>
+          </Link>
 
         </div>
 

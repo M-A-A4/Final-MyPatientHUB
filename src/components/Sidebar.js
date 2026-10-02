@@ -24,6 +24,12 @@ function Sidebar() {
           <span>Find Clinic</span>
         </Link>
 
+        {/* NEW MARKETPLACE LINK */}
+        <Link to="/marketplace">
+          <i className="fa-solid fa-store"></i>
+          <span>Find MarketPlace</span>
+        </Link>
+
         <Link to="#">
           <i className="fa-solid fa-calendar"></i>
           <span>Appointments</span>
