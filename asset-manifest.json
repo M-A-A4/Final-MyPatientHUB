@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Final-MyPatientHUB/static/css/main.dd588b06.css",
-    "main.js": "/Final-MyPatientHUB/static/js/main.0afc8a7e.js",
-    "static/js/453.1e67de7d.chunk.js": "/Final-MyPatientHUB/static/js/453.1e67de7d.chunk.js",
-    "static/media/hello.jpeg": "/Final-MyPatientHUB/static/media/hello.6f18032d791809077157.jpeg",
-    "static/media/pink.jpg": "/Final-MyPatientHUB/static/media/pink.371bd89ca226e9dbd9c9.jpg",
-    "index.html": "/Final-MyPatientHUB/index.html",
-    "main.dd588b06.css.map": "/Final-MyPatientHUB/static/css/main.dd588b06.css.map",
-    "main.0afc8a7e.js.map": "/Final-MyPatientHUB/static/js/main.0afc8a7e.js.map",
-    "453.1e67de7d.chunk.js.map": "/Final-MyPatientHUB/static/js/453.1e67de7d.chunk.js.map"
+    "main.css": "/static/css/main.140f9e71.css",
+    "main.js": "/static/js/main.36224ecc.js",
+    "static/js/453.1e67de7d.chunk.js": "/static/js/453.1e67de7d.chunk.js",
+    "static/media/hello.jpeg": "/static/media/hello.6f18032d791809077157.jpeg",
+    "static/media/pink.jpg": "/static/media/pink.371bd89ca226e9dbd9c9.jpg",
+    "index.html": "/index.html",
+    "main.140f9e71.css.map": "/static/css/main.140f9e71.css.map",
+    "main.36224ecc.js.map": "/static/js/main.36224ecc.js.map",
+    "453.1e67de7d.chunk.js.map": "/static/js/453.1e67de7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd588b06.css",
-    "static/js/main.0afc8a7e.js"
+    "static/css/main.140f9e71.css",
+    "static/js/main.36224ecc.js"
   ]
 }
