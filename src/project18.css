@@ -80,14 +80,18 @@ body{
     background:#f0f0f0;
 }
 
-.login-card input{
+.login-card input[type="email"],
+.login-card input[type="password"]{
     width:100%;
     padding:12px;
-
     margin-bottom:15px;
-
     border:1px solid #ccc;
     border-radius:8px;
+}
+
+.options input{
+    width:auto;
+    margin-right:6px;
 }
 
 .btn-primary{
@@ -108,15 +112,23 @@ body{
     background:#3730a3;
 }
 
-.options{
-    margin-top:15px;
-
-    display:flex;
-    justify-content:space-between;
-
-    font-size:14px;
+.options {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
 }
 
+.options label {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;   /* prevents Remember Me from shrinking */
+}
+
+.options input {
+    margin-right: 6px;
+}
 .options a{
     text-decoration:none;
     color:#4f46e5;

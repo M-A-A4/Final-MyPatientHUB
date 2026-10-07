@@ -24,10 +24,20 @@ function Sidebar() {
           <span>Find Clinic</span>
         </Link>
 
-        {/* NEW MARKETPLACE LINK */}
+    
         <Link to="/marketplace">
           <i className="fa-solid fa-store"></i>
           <span>Find MarketPlace</span>
+        </Link>
+
+        <Link to="/findpharmacy">
+          <i className="fa-solid fa-pills"></i>
+          <span>Find Pharmacy</span>
+        </Link>
+
+        <Link to="/mydependents">
+          <i className="fa-solid fa-users"></i>
+          <span>My Dependents</span>
         </Link>
 
         <Link to="#">
@@ -35,6 +45,7 @@ function Sidebar() {
           <span>Appointments</span>
         </Link>
 
+        
         <Link to="#">
           <i className="fa-solid fa-comments"></i>
           <span>Messages</span>
@@ -44,6 +55,8 @@ function Sidebar() {
           <i className="fa-solid fa-gear"></i>
           <span>Settings</span>
         </Link>
+
+        
       </nav>
     </aside>
   );

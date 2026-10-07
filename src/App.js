@@ -18,6 +18,8 @@ import FindClinic from "./components/findclinic";
 import FindClinicList from "./components/findcliniclist";
 import FindClinicMap from "./components/findclinicmap";
 import Marketplace from "./components/Marketplace";
+import FindPharmacy from "./components/FindPharmacy";
+import MyDependents from "./components/MyDependents";
 
 function RedirectHandler() {
   const location = useLocation();
@@ -41,7 +43,7 @@ function RedirectHandler() {
 
 function App() {
   return (
-    <BrowserRouter basename="/Final-MyPatientHUB">
+    <BrowserRouter>
       <RedirectHandler />
 
       <Routes>
@@ -63,12 +65,14 @@ function App() {
 
         <Route path="/findclinicmap" element={<FindClinicMap />} />
 
-        {/* NEW MARKETPLACE PAGE */}
-        <Route
-          path="/marketplace"
-          element={<Marketplace />}
-        />
-      </Routes>
+        <Route path="/marketplace" element={<Marketplace />} />
+
+        <Route path="/findpharmacy" element={<FindPharmacy />} />
+
+        <Route path="/mydependents" element={<MyDependents />} />
+
+        </Routes>
+        
     </BrowserRouter>
   );
 }
