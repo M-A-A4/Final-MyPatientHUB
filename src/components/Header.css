@@ -1,0 +1,337 @@
+
+/* ========================================
+   Shared MyPatientHUB Header
+======================================== */
+
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 110px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 5px 20px rgba(31, 45, 75, 0.08);
+}
+
+/* Breadcrumb and header title */
+.app-breadcrumb {
+  flex: 1;
+  min-width: 150px;
+  color: #586b8d;
+  font-size: 18px;
+}
+
+.app-breadcrumb-line {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.app-breadcrumb-line i {
+  color: #94a2bb;
+  font-size: 21px;
+}
+
+.app-breadcrumb-line > span:first-of-type {
+  color: #aab4c5;
+}
+
+.app-breadcrumb strong {
+  display: block;
+  color: #30466e;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Hamburger menu and header icons */
+.app-menu-button,
+.app-header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: #34466b;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/* Smaller three-line hamburger button */
+.app-menu-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 9px;
+  font-size: 23px;
+}
+
+.app-menu-button:hover,
+.app-header-icon:hover {
+  color: #d20da8;
+  background: #fff0fb;
+}
+
+.app-menu-button:active,
+.app-header-icon:active {
+  transform: scale(0.95);
+}
+
+/* Header actions */
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+/* Smaller search box */
+.app-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  border: 1px solid #dfe4ec;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-search:focus-within {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+.app-search > i {
+  flex-shrink: 0;
+  color: #34466b;
+  font-size: 18px;
+}
+
+.app-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #34466b;
+  font-family: inherit;
+  font-size: 15px;
+  box-shadow: none;
+}
+
+.app-search input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.app-search input::placeholder {
+  color: #a1aec2;
+  opacity: 1;
+}
+
+/* Logout button */
+.app-logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 8px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #34466b;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.app-logout-button i {
+  font-size: 24px;
+}
+
+.app-logout-button:hover {
+  color: #d20da8;
+  background: #fff0fb;
+}
+
+/* Settings and notification icons */
+.app-header-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 9px;
+  font-size: 27px;
+}
+
+/* Keyboard accessibility */
+.app-topbar button:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, 0.4);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   Tablet and Mobile
+======================================== */
+
+@media (max-width: 1000px) {
+  .app-topbar {
+    gap: 15px;
+    padding: 18px 20px;
+  }
+
+  .app-breadcrumb strong {
+    font-size: 19px;
+  }
+
+  .app-header-actions {
+    gap: 10px;
+  }
+
+  .app-search {
+    width: 220px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-topbar {
+    min-height: 90px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .app-breadcrumb {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  .app-breadcrumb-line {
+    gap: 9px;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  .app-breadcrumb-line i {
+    font-size: 17px;
+  }
+
+  .app-breadcrumb strong {
+    font-size: 17px;
+  }
+
+  /* Smaller hamburger on phones */
+  .app-menu-button {
+    width: 38px;
+    height: 38px;
+    font-size: 21px;
+  }
+
+  .app-header-actions {
+    width: 100%;
+    min-width: 0;
+    gap: 10px;
+  }
+
+  /* Smaller search box on phones */
+  .app-search {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    height: 40px;
+    gap: 8px;
+    padding: 0 11px;
+  }
+
+  .app-search > i {
+    font-size: 16px;
+  }
+
+  .app-search input {
+    font-size: 14px;
+  }
+
+  .app-logout-button {
+    gap: 6px;
+    padding: 8px 5px;
+    font-size: 15px;
+  }
+
+  .app-logout-button i {
+    font-size: 20px;
+  }
+
+  .app-header-icon {
+    width: 36px;
+    height: 40px;
+    font-size: 21px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .app-topbar {
+    gap: 8px;
+    padding: 12px 10px;
+  }
+
+  .app-breadcrumb strong {
+    font-size: 15px;
+  }
+
+  .app-menu-button {
+    width: 34px;
+    height: 34px;
+    font-size: 19px;
+  }
+
+  .app-header-actions {
+    gap: 6px;
+  }
+
+  .app-search {
+    height: 36px;
+    padding: 0 9px;
+  }
+
+  .app-search input {
+    font-size: 13px;
+  }
+
+  .app-logout-button {
+    font-size: 14px;
+  }
+
+  .app-logout-button span {
+    display: none;
+  }
+
+  .app-logout-button i {
+    font-size: 21px;
+  }
+
+  .app-header-icon {
+    width: 32px;
+    height: 36px;
+    font-size: 19px;
+  }
+}

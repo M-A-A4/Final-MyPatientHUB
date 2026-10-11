@@ -20,6 +20,7 @@ import FindClinicMap from "./components/findclinicmap";
 import Marketplace from "./components/Marketplace";
 import FindPharmacy from "./components/FindPharmacy";
 import MyDependents from "./components/MyDependents";
+import Settings from "./components/Settings";
 
 function RedirectHandler() {
   const location = useLocation();
@@ -29,11 +30,17 @@ function RedirectHandler() {
     const redirect = params.get("redirect");
 
     if (redirect) {
+      const base =
+        window.location.hostname === "m-a-a4.github.io"
+          ? "/Final-MyPatientHUB"
+          : "";
+
       window.history.replaceState(
         {},
         "",
-        "/Final-MyPatientHUB" + redirect
+        base + redirect
       );
+
       window.location.reload();
     }
   }, [location]);
@@ -42,8 +49,13 @@ function RedirectHandler() {
 }
 
 function App() {
+  const basename =
+    window.location.hostname === "m-a-a4.github.io"
+      ? "/Final-MyPatientHUB"
+      : "";
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <RedirectHandler />
 
       <Routes>
@@ -71,8 +83,9 @@ function App() {
 
         <Route path="/mydependents" element={<MyDependents />} />
 
-        </Routes>
+        <Route path="/settings" element={<Settings />} />
         
+      </Routes>
     </BrowserRouter>
   );
 }

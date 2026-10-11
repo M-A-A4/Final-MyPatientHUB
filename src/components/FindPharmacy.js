@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import "../FindPharmacy.css";
+import "./FindPharmacy.css";
+import Header from "./Header";
+
 
 function FindPharmacy() {
   const navigate = useNavigate();
@@ -10,13 +12,7 @@ function FindPharmacy() {
   const [searchText, setSearchText] = useState("");
   const [entriesPerPage, setEntriesPerPage] = useState(25);
 
-  const handleSearch = () => {
-  if (searchText.trim() === "") {
-    alert("Please enter something to search.");
-  } else {
-    alert("Searching for: " + searchText);
-  }
-};
+
 
   const pharmacies = [
     {
@@ -108,32 +104,10 @@ function FindPharmacy() {
 
       <Sidebar />
 
+       <main className="content">
+          <Header />
+
       <div className="pharmacy-main">
-
-        <div className="topbar">
-
-          <div className="top-actions">
-
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
-            />
-
-            <button onClick={handleSearch}>
-            <i className="fa-solid fa-magnifying-glass"></i> Search
-            </button>
-          </div>
-
-          <button
-            className="logout-btn"
-            onClick={() => navigate("/login")}
-          >
-            Logout
-          </button>
-
-        </div>
 
         <div className="pharmacy-title">
           <h1>Search Pharmacies for Medicines</h1>
@@ -302,6 +276,7 @@ function FindPharmacy() {
         <Footer />
 
       </div>
+      </main>
 
     </div>
   );
