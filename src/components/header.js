@@ -7,9 +7,6 @@ function Header() {
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState("");
 
- 
-
-
 
 const toggleSidebar = () => {
   const sidebar = document.querySelector(".sidebar");
