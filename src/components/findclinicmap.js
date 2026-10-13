@@ -1,14 +1,14 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import Sidebar from "./Sidebar";
+
 import Footer from "./Footer";
 
 function FindClinicMap() {
   return (
     <div className="dashboard-container">
 
-      <Sidebar />
+   
 
       <main className="content">
 

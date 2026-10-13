@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidebar from "./Sidebar";
+
 import Footer from "./Footer";
 
 function Dashboard() {
@@ -41,7 +41,7 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
 
-      <Sidebar />
+
 
       <main className="content">
 

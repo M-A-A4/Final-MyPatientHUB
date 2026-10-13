@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidebar from "./Sidebar";
+
 import Footer from "./Footer";
 import "../FindPharmacy.css";
 
@@ -106,7 +106,7 @@ function FindPharmacy() {
   return (
     <div className="pharmacy-page">
 
-      <Sidebar />
+  
 
       <div className="pharmacy-main">
 

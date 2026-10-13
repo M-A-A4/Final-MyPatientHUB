@@ -1,0 +1,164 @@
+
+.patient-header {
+  width: 100%;
+  min-height: 76px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8ebef;
+  box-sizing: border-box;
+}
+
+.header-left,
+.header-right,
+.header-breadcrumb {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  gap: 20px;
+  min-width: 0;
+}
+
+.header-right {
+  gap: 16px;
+}
+
+.header-breadcrumb {
+  gap: 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.header-icon-button,
+.header-home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #475569;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.header-icon-button:hover,
+.header-home-button:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+.header-icon-button:focus-visible,
+.header-home-button:focus-visible,
+.header-logout-button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.breadcrumb-divider {
+  color: #cbd5e1;
+}
+
+.breadcrumb-current {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #64748b;
+}
+
+.header-search input {
+  width: 140px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.header-search button {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header-logout-button:hover {
+  background: #dbeafe;
+}
+
+@media (max-width: 900px) {
+  .patient-header {
+    padding: 14px 18px;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .header-search input {
+    width: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .patient-header {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .header-left {
+    width: 100%;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .header-search {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .header-search input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .header-logout-button span {
+    display: none;
+  }
+}

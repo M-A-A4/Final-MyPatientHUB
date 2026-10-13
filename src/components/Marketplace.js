@@ -103,7 +103,7 @@ function Marketplace() {
   return (
     <div className="marketplace-page">
 
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       <div className="marketplace-main">
 

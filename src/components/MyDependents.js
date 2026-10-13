@@ -99,7 +99,7 @@ function MyDependents() {
     <div className="dashboard-container">
 
       {/* SIDEBAR */}
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       {/* MAIN CONTENT */}
       <main className="content">
