@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import "./MyDependents.css";
+import Header from "./Header";
 
 function MyDependents() {
   const [step, setStep] = useState(1);
@@ -101,43 +102,11 @@ function MyDependents() {
       {/* SIDEBAR */}
       {/* <Sidebar /> */}
 
-      {/* MAIN CONTENT */}
+         {/* MAIN CONTENT */}
       <main className="content">
+         <Header />
 
-        {/* HEADER / TOPBAR */}
-        <div className="topbar">
-
-          <div className="top-actions">
-
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  handleSearch();
-                }
-              }}
-            />
-
-            <button onClick={handleSearch}>
-              <i className="fa-solid fa-magnifying-glass"></i>
-              Search
-            </button>
-
-          </div>
-
-          <button
-            className="logout-btn"
-            onClick={handleLogout}
-          >
-            Logout
-          </button>
-
-        </div>
-
-
+        
         {/* PAGE CONTENT */}
         <div className="dependents-page">
 
@@ -571,8 +540,10 @@ function MyDependents() {
         <Footer />
 
       </main>
+      
 
     </div>
+    
   );
 }
 

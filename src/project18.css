@@ -834,3 +834,109 @@ iframe{
     cursor:pointer;
 }
 
+
+
+
+/* ==========================================
+   MyPatientHUB: Mobile Sidebar
+   Supports Dashboard and Pharmacy pages
+========================================== */
+
+@media (max-width: 760px) {
+  .dashboard-container,
+  .pharmacy-page {
+    position: relative;
+    overflow-x: clip;
+  }
+
+  /* Hide sidebar until the hamburger is clicked */
+  .dashboard-container .sidebar,
+  .pharmacy-page .sidebar {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 85vw;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 8px 0 25px rgba(30, 45, 70, 0.15);
+    transform: translateX(-110%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.25s ease, visibility 0.25s ease;
+    z-index: 200;
+  }
+
+  /* Open sidebar */
+  .dashboard-container.mobile-sidebar-open .sidebar,
+  .pharmacy-page.mobile-sidebar-open .sidebar {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Show sidebar icons and names */
+  .dashboard-container .sidebar nav a span,
+  .pharmacy-page .sidebar nav a span {
+    display: inline !important;
+  }
+
+  .dashboard-container .sidebar nav a,
+  .pharmacy-page .sidebar nav a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .dashboard-container .sidebar nav a i,
+  .pharmacy-page .sidebar nav a i {
+    display: inline-block !important;
+    flex-shrink: 0;
+  }
+
+  /* Main content fills the phone width */
+  .dashboard-container > .content,
+  .pharmacy-page > .content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Keep header and hamburger above the sidebar overlay */
+  .dashboard-container .app-topbar,
+  .pharmacy-page .app-topbar,
+  .dashboard-container .settings-topbar,
+  .pharmacy-page .settings-topbar {
+    z-index: 210;
+  }
+
+  .dashboard-container .app-menu-button,
+  .pharmacy-page .app-menu-button,
+  .dashboard-container .settings-menu-toggle,
+  .pharmacy-page .settings-menu-toggle {
+    position: relative;
+    z-index: 220;
+  }
+
+  /* Dim the background while the sidebar is open */
+  .dashboard-container.mobile-sidebar-open::after,
+  .pharmacy-page.mobile-sidebar-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 29, 48, 0.35);
+    z-index: 190;
+  }
+}

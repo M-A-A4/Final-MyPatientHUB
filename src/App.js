@@ -124,10 +124,14 @@ import FindClinicMap from "./components/findclinicmap";
 import Marketplace from "./components/Marketplace";
 import FindPharmacy from "./components/FindPharmacy";
 import MyDependents from "./components/MyDependents";
+<<<<<<< HEAD
 import MyProfile from "./components/myprofile";
 import Settings from "./components/setting";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/header";
+=======
+import Settings from "./components/Settings";
+>>>>>>> c69c34df376818dbc6414d38ee907f22aec94d84
 
 function RedirectHandler() {
   const location = useLocation();
@@ -137,10 +141,15 @@ function RedirectHandler() {
     const redirect = params.get("redirect");
 
     if (redirect) {
+      const base =
+        window.location.hostname === "m-a-a4.github.io"
+          ? "/Final-MyPatientHUB"
+          : "";
+
       window.history.replaceState(
         {},
         "",
-        "/Final-MyPatientHUB" + redirect
+        base + redirect
       );
 
       window.location.reload();
@@ -212,9 +221,48 @@ function AppLayout() {
 }
 
 function App() {
+  const basename =
+    window.location.hostname === "m-a-a4.github.io"
+      ? "/Final-MyPatientHUB"
+      : "";
+
   return (
+<<<<<<< HEAD
     <BrowserRouter>
       <AppLayout />
+=======
+    <BrowserRouter basename={basename}>
+      <RedirectHandler />
+
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/finddoctor" element={<FindDoctor />} />
+
+        <Route path="/doctorlist" element={<DoctorList />} />
+
+        <Route path="/doctormap" element={<DoctorMap />} />
+
+        <Route path="/findclinic" element={<FindClinic />} />
+
+        <Route path="/findcliniclist" element={<FindClinicList />} />
+
+        <Route path="/findclinicmap" element={<FindClinicMap />} />
+
+        <Route path="/marketplace" element={<Marketplace />} />
+
+        <Route path="/findpharmacy" element={<FindPharmacy />} />
+
+        <Route path="/mydependents" element={<MyDependents />} />
+
+        <Route path="/settings" element={<Settings />} />
+        
+      </Routes>
+>>>>>>> c69c34df376818dbc6414d38ee907f22aec94d84
     </BrowserRouter>
   );
 }

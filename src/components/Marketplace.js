@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import "../Marketplace.css";
+import "./Marketplace.css";
+import Header from "./Header";
 
 function Marketplace() {
   const navigate = useNavigate();
@@ -10,9 +11,7 @@ function Marketplace() {
   const [searchText, setSearchText] = useState("");
   const [entriesPerPage, setEntriesPerPage] = useState(7);
 
-  const handleLogout = () => {
-    navigate("/login");
-  };
+  
 
   const marketplaceCards = [
     {
@@ -105,41 +104,11 @@ function Marketplace() {
 
       {/* <Sidebar /> */}
 
+      <main className="content">
+          <Header />
       <div className="marketplace-main">
 
-        <div className="marketplace-header">
-
-          <div className="marketplace-search">
-
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchText}
-              onChange={(e) =>
-                setSearchText(e.target.value)
-              }
-            />
-
-            <button
-            onClick={() => {
-                if (searchText.trim() === "") {
-                alert("Please enter something to search.");
-                }
-            }}
-            >
-            Search
-            </button>
-
-          </div>
-
-          <button
-            className="marketplace-logout"
-            onClick={handleLogout}
-          >
-            Logout
-          </button>
-
-        </div>
+        
 
         <div className="marketplace-title">
 
@@ -264,6 +233,7 @@ function Marketplace() {
         <Footer />
 
       </div>
+      </main>
 
     </div>
   );
