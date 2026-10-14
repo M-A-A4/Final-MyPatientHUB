@@ -19,9 +19,11 @@ const toggleSidebar = () => {
     return;
   }
 
-  const layout = sidebar.closest(
-    ".dashboard-container, .pharmacy-page, .marketplace-page"
-  );
+  
+ const layout = document.querySelector(
+  ".dashboard-container, .pharmacy-page, .marketplace-page, .account-layout"
+);
+
 
   if (!layout) {
     console.error("Page wrapper was not found.");
@@ -55,6 +57,7 @@ const toggleSidebar = () => {
       { words: ["market", "marketplace"], path: "/marketplace" },
       { words: ["pharmacy", "pharmacies"], path: "/findpharmacy" },
       { words: ["dependent", "dependents"], path: "/mydependents" },
+      { words: ["my account", "myaccount", "profile"], path: "/myaccount" },
       { words: ["setting", "settings", "account"], path: "/settings" },
     ];
 
