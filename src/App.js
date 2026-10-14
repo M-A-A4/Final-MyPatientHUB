@@ -20,6 +20,7 @@ import FindClinicMap from "./components/findclinicmap";
 import Marketplace from "./components/Marketplace";
 import FindPharmacy from "./components/FindPharmacy";
 import MyDependents from "./components/MyDependents";
+import MyAccount from "./components/MyAccount";
 import Settings from "./components/Settings";
 
 function RedirectHandler() {
@@ -82,6 +83,8 @@ function App() {
         <Route path="/findpharmacy" element={<FindPharmacy />} />
 
         <Route path="/mydependents" element={<MyDependents />} />
+
+        <Route path="/myaccount" element={<MyAccount />} />
 
         <Route path="/settings" element={<Settings />} />
         
