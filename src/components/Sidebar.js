@@ -6,7 +6,6 @@ import "./Sidebar.css";
 function Sidebar() {
   const menuItems = [
     { label: "Dashboard", path: "/dashboard", icon: "fa-house" },
-    { label: "Appointments", path: "/appointments", icon: "fa-calendar-check" },
     { label: "Find Doctor", path: "/finddoctor", icon: "fa-user-doctor" },
     { label: "Find Clinic", path: "/findclinic", icon: "fa-hospital" },
     { label: "Chat", path: "/chat", icon: "fa-comments" },
