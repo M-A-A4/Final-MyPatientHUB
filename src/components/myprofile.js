@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "./Sidebar";
+
 import Footer from "./Footer";
 import "./AccountPages.css";
-import Header from "./header";
+
 
 const defaultProfile = {
   fullName: "",

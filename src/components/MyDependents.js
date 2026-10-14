@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import "./MyDependents.css";
-import Header from "./Header";
+import Header from "./header";
 
 function MyDependents() {
   const [step, setStep] = useState(1);

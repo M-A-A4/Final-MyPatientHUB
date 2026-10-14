@@ -1,501 +1,271 @@
 
-<<<<<<< HEAD
-.patient-header {
-  width: 100%;
-  min-height: 76px;
-  padding: 16px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e8ebef;
-  box-sizing: border-box;
-}
 
-.header-left,
-.header-right,
-.header-breadcrumb {
-  display: flex;
-  align-items: center;
-}
-
-.header-left {
-  gap: 20px;
-  min-width: 0;
-}
-
-.header-right {
-  gap: 16px;
-}
-
-.header-breadcrumb {
-  gap: 12px;
-  color: #64748b;
-  font-size: 14px;
-}
-
-.header-icon-button,
-.header-home-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background: transparent;
-  color: #475569;
-  cursor: pointer;
-  font-size: 20px;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.header-icon-button:hover,
-.header-home-button:hover {
-  background-color: #f1f5f9;
-  color: #2563eb;
-}
-
-.header-icon-button:focus-visible,
-.header-home-button:focus-visible,
-.header-logout-button:focus-visible {
-  outline: 2px solid #2563eb;
-  outline-offset: 3px;
-}
-
-.breadcrumb-divider {
-  color: #cbd5e1;
-}
-
-.breadcrumb-current {
-  color: #1e293b;
-  font-weight: 600;
-}
-
-.header-search {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  color: #64748b;
-}
-
-.header-search input {
-  width: 140px;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #1e293b;
-  font-size: 14px;
-}
-
-.header-search button {
-  border: none;
-  background: transparent;
-  color: #2563eb;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.header-logout-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border: none;
-  border-radius: 8px;
-  background: #eff6ff;
-  color: #1d4ed8;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.header-logout-button:hover {
-  background: #dbeafe;
-}
-
-@media (max-width: 900px) {
-  .patient-header {
-    padding: 14px 18px;
-  }
-
-  .header-right {
-    gap: 8px;
-  }
-
-  .header-search input {
-    width: 90px;
-  }
-}
-
-@media (max-width: 600px) {
-  .patient-header {
-    flex-wrap: wrap;
-    padding: 12px;
-  }
-
-  .header-left {
-    width: 100%;
-  }
-
-  .header-right {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .header-search {
-    flex: 1;
-    min-width: 120px;
-  }
-
-  .header-search input {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .header-logout-button span {
-    display: none;
-=======
-/* ========================================
-   Shared MyPatientHUB Header
-======================================== */
-
+/* Main Header */
 .app-topbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-  min-height: 110px;
-  box-sizing: border-box;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-  background: rgba(255, 255, 255, 0.98);
-  border-radius: 0 0 18px 18px;
-  box-shadow: 0 5px 20px rgba(31, 45, 75, 0.08);
+    width: 100%;
+    min-height: 85px;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
 }
 
-/* Breadcrumb and header title */
+/* Breadcrumb and Title */
 .app-breadcrumb {
-  flex: 1;
-  min-width: 150px;
-  color: #586b8d;
-  font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex-shrink: 0;
 }
 
 .app-breadcrumb-line {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 8px;
-  font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-size: 13px;
 }
 
 .app-breadcrumb-line i {
-  color: #94a2bb;
-  font-size: 21px;
-}
-
-.app-breadcrumb-line > span:first-of-type {
-  color: #aab4c5;
+    color: #2563eb;
 }
 
 .app-breadcrumb strong {
-  display: block;
-  color: #30466e;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.3;
+    color: #1f2937;
+    font-size: 17px;
+    font-weight: 600;
 }
 
-/* Hamburger menu and header icons */
-.app-menu-button,
-.app-header-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border: none;
-  background: transparent;
-  color: #34466b;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-/* Smaller three-line hamburger button */
+/* Burger Menu Button */
 .app-menu-button {
-  width: 44px;
-  height: 44px;
-  border-radius: 9px;
-  font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #f3f4f6;
+    color: #374151;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.app-menu-button:hover,
-.app-header-icon:hover {
-  color: #d20da8;
-  background: #fff0fb;
+.app-menu-button:hover {
+    background-color: #e5e7eb;
+    color: #2563eb;
 }
 
-.app-menu-button:active,
-.app-header-icon:active {
-  transform: scale(0.95);
-}
-
-/* Header actions */
+/* Right Header Actions */
 .app-header-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 18px;
-  flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-left: auto;
 }
 
-/* Smaller search box */
+/* Search Form */
 .app-search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 250px;
-  height: 46px;
-  box-sizing: border-box;
-  padding: 0 14px;
-  border: 1px solid #dfe4ec;
-  border-radius: 10px;
-  background: #fff;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 230px;
+    height: 42px;
+    padding: 0 13px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background-color: #f9fafb;
+    box-sizing: border-box;
 }
 
-.app-search:focus-within {
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
-}
-
-.app-search > i {
-  flex-shrink: 0;
-  color: #34466b;
-  font-size: 18px;
+.app-search i {
+    color: #9ca3af;
+    font-size: 15px;
 }
 
 .app-search input {
-  width: 100%;
-  min-width: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  background: transparent;
-  color: #34466b;
-  font-family: inherit;
-  font-size: 15px;
-  box-shadow: none;
-}
-
-.app-search input:focus {
-  outline: none;
-  box-shadow: none;
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #1f2937;
+    font-size: 14px;
 }
 
 .app-search input::placeholder {
-  color: #a1aec2;
-  opacity: 1;
+    color: #9ca3af;
 }
 
-/* Logout button */
+/* Logout Button */
 .app-logout-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 8px;
-  border: none;
-  border-radius: 8px;
-  background: transparent;
-  color: #34466b;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 600;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.app-logout-button i {
-  font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .app-logout-button:hover {
-  color: #d20da8;
-  background: #fff0fb;
+    background-color: #dbeafe;
 }
 
-/* Settings and notification icons */
+/* Settings and Notifications */
 .app-header-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 9px;
-  font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #6b7280;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Keyboard accessibility */
-.app-topbar button:focus-visible {
-  outline: 3px solid rgba(79, 70, 229, 0.4);
-  outline-offset: 4px;
+.app-header-icon:hover {
+    background-color: #f3f4f6;
+    color: #2563eb;
 }
 
-/* ========================================
-   Tablet and Mobile
-======================================== */
-
-@media (max-width: 1000px) {
-  .app-topbar {
-    gap: 15px;
-    padding: 18px 20px;
-  }
-
-  .app-breadcrumb strong {
-    font-size: 19px;
-  }
-
-  .app-header-actions {
-    gap: 10px;
-  }
-
-  .app-search {
-    width: 220px;
-    height: 42px;
-  }
+/* Keyboard Accessibility */
+.app-menu-button:focus-visible,
+.app-logout-button:focus-visible,
+.app-header-icon:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
 }
 
-@media (max-width: 760px) {
-  .app-topbar {
-    min-height: 90px;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 14px;
-    margin-bottom: 14px;
-  }
 
-  .app-breadcrumb {
-    flex: 1;
-    min-width: 0;
-    font-size: 14px;
-  }
 
-  .app-breadcrumb-line {
-    gap: 9px;
-    margin-bottom: 5px;
-    font-size: 13px;
-  }
 
-  .app-breadcrumb-line i {
-    font-size: 17px;
-  }
 
-  .app-breadcrumb strong {
-    font-size: 17px;
-  }
-
-  /* Smaller hamburger on phones */
-  .app-menu-button {
-    width: 38px;
-    height: 38px;
-    font-size: 21px;
-  }
-
-  .app-header-actions {
+.account-layout {
+    display: flex;
+    min-height: 100vh;
     width: 100%;
-    min-width: 0;
-    gap: 10px;
-  }
+}
 
-  /* Smaller search box on phones */
-  .app-search {
+.account-layout>.sidebar {
+    width: 250px;
+    min-width: 250px;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width 0.3s ease, min-width 0.3s ease;
+}
+
+.account-layout.sidebar-collapsed>.sidebar {
+   
+    margin-left: -200px;
+}
+
+
+.account-main {
     flex: 1;
-    width: auto;
     min-width: 0;
-    height: 40px;
-    gap: 8px;
-    padding: 0 11px;
-  }
-
-  .app-search > i {
-    font-size: 16px;
-  }
-
-  .app-search input {
-    font-size: 14px;
-  }
-
-  .app-logout-button {
-    gap: 6px;
-    padding: 8px 5px;
-    font-size: 15px;
-  }
-
-  .app-logout-button i {
-    font-size: 20px;
-  }
-
-  .app-header-icon {
-    width: 36px;
-    height: 40px;
-    font-size: 21px;
-  }
+   
 }
 
-/* Small phones */
-@media (max-width: 400px) {
-  .app-topbar {
-    gap: 8px;
-    padding: 12px 10px;
-  }
 
-  .app-breadcrumb strong {
-    font-size: 15px;
-  }
 
-  .app-menu-button {
-    width: 34px;
-    height: 34px;
-    font-size: 19px;
-  }
+/* Tablet */
+@media (max-width: 1000px) {
+    .app-topbar {
+        padding: 14px 18px;
+        gap: 16px;
+    }
 
-  .app-header-actions {
-    gap: 6px;
-  }
+    .app-header-actions {
+        gap: 8px;
+    }
 
-  .app-search {
-    height: 36px;
-    padding: 0 9px;
-  }
-
-  .app-search input {
-    font-size: 13px;
-  }
-
-  .app-logout-button {
-    font-size: 14px;
-  }
-
-  .app-logout-button span {
-    display: none;
-  }
-
-  .app-logout-button i {
-    font-size: 21px;
-  }
-
-  .app-header-icon {
-    width: 32px;
-    height: 36px;
-    font-size: 19px;
->>>>>>> c69c34df376818dbc6414d38ee907f22aec94d84
-  }
+    .app-search {
+        width: 180px;
+    }
 }
+
+/* Mobile */
+@media (max-width: 760px) {
+    .app-topbar {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .app-breadcrumb {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .app-breadcrumb strong {
+        font-size: 15px;
+    }
+
+    .app-header-actions {
+        width: 100%;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .app-search {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+    }
+
+    .app-logout-button {
+        padding: 0 10px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 420px) {
+    .app-topbar {
+        padding: 12px;
+    }
+
+    .app-breadcrumb-line {
+        font-size: 12px;
+    }
+
+    .app-breadcrumb strong {
+        font-size: 14px;
+    }
+
+    .app-menu-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .app-logout-button span {
+        display: none;
+    }
+
+    .app-header-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+

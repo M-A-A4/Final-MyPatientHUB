@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
-function Header() {
+function Header({onToggleSidebar}) {
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState("");
 
@@ -82,7 +82,7 @@ const toggleSidebar = () => {
         <button
             type="button"
             className="app-menu-button"
-            onClick={toggleSidebar}
+            onClick={onToggleSidebar}
             aria-label="Open or close sidebar"
           >
             <i className="fa-solid fa-bars"></i>

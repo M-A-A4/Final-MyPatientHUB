@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .account-layout {
     display: flex;
     min-height: 100vh;
@@ -19,7 +19,7 @@
     flex: 1;
     min-width: 0;
 }
-=======
+
 
 
 
@@ -677,4 +677,4 @@
     transform: translateX(0);
   }
 }
->>>>>>> c69c34df376818dbc6414d38ee907f22aec94d84
+
