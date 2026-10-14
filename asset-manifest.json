@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Final-MyPatientHUB/static/css/main.e46f4930.css",
-    "main.js": "/Final-MyPatientHUB/static/js/main.b95222bd.js",
+    "main.css": "/Final-MyPatientHUB/static/css/main.8e36c751.css",
+    "main.js": "/Final-MyPatientHUB/static/js/main.d13ae29e.js",
     "static/js/453.1e67de7d.chunk.js": "/Final-MyPatientHUB/static/js/453.1e67de7d.chunk.js",
     "static/media/hello.jpeg": "/Final-MyPatientHUB/static/media/hello.6f18032d791809077157.jpeg",
     "static/media/pink.jpg": "/Final-MyPatientHUB/static/media/pink.371bd89ca226e9dbd9c9.jpg",
     "index.html": "/Final-MyPatientHUB/index.html",
-    "main.e46f4930.css.map": "/Final-MyPatientHUB/static/css/main.e46f4930.css.map",
-    "main.b95222bd.js.map": "/Final-MyPatientHUB/static/js/main.b95222bd.js.map",
+    "main.8e36c751.css.map": "/Final-MyPatientHUB/static/css/main.8e36c751.css.map",
+    "main.d13ae29e.js.map": "/Final-MyPatientHUB/static/js/main.d13ae29e.js.map",
     "453.1e67de7d.chunk.js.map": "/Final-MyPatientHUB/static/js/453.1e67de7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e46f4930.css",
-    "static/js/main.b95222bd.js"
+    "static/css/main.8e36c751.css",
+    "static/js/main.d13ae29e.js"
   ]
 }
