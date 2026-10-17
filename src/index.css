@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Accessible global theme layer. The original page styles remain the light-mode baseline. */
+:root { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme="dark"] body { background: #0b1220; color: #e5eaf4; }
+html[data-theme="dark"] .app-topbar,
+html[data-theme="dark"] .sidebar .sidebar-logo,
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .dashboard-card,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .account-card,
+html[data-theme="dark"] .settings-card,
+html[data-theme="dark"] .dependent-card,
+html[data-theme="dark"] .pharmacy-card,
+html[data-theme="dark"] .marketplace-card,
+html[data-theme="dark"] .doctor-card,
+html[data-theme="dark"] .clinic-card,
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .main-content,
+html[data-theme="dark"] .dashboard-content,
+html[data-theme="dark"] .account-layout,
+html[data-theme="dark"] .pharmacy-page,
+html[data-theme="dark"] .marketplace-page {
+  background-color: #111c2e !important;
+  color: #e5eaf4 !important;
+  border-color: #26364d !important;
+}
+html[data-theme="dark"] .app-topbar { box-shadow: 0 8px 28px rgba(0,0,0,.24); }
+html[data-theme="dark"] .app-breadcrumb,
+html[data-theme="dark"] .app-breadcrumb strong,
+html[data-theme="dark"] .app-breadcrumb-line i,
+html[data-theme="dark"] .app-menu-button,
+html[data-theme="dark"] .app-header-icon,
+html[data-theme="dark"] .app-logout-button,
+html[data-theme="dark"] .sidebar .sidebar-logo-text strong,
+html[data-theme="dark"] .sidebar .sidebar-link,
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] label { color: #e5eaf4; }
+html[data-theme="dark"] .app-search,
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea { background-color: #0b1424; color: #e5eaf4; border-color: #30415b; }
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder { color: #8fa0ba; }
+html[data-theme="dark"] table th { background: #1a2940; color: #dbe6f8; }
+html[data-theme="dark"] table td,
+html[data-theme="dark"] tr { border-color: #2a3a52; color: #d7e0ef; }
+html[data-theme="dark"] .sidebar .sidebar-link:hover,
+html[data-theme="dark"] .sidebar .sidebar-link.active { background: #253554; color: #fff; }
+html[data-theme="dark"] .app-header-icon:hover,
+html[data-theme="dark"] .app-menu-button:hover { background: #26364d; color: #f472b6; }
+html[data-theme="dark"] .not-found-page { background: #0b1220; color: #e5eaf4; }
+.not-found-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #f4f6fb; }
+.not-found-card { max-width: 520px; text-align: center; padding: 42px; border-radius: 22px; background: #fff; box-shadow: 0 18px 60px rgba(27,39,71,.12); }
+.not-found-code { color: #6d28d9; font-size: clamp(56px, 12vw, 96px); font-weight: 800; line-height: 1; }
+.not-found-card h1 { margin: 18px 0 10px; color: #233451; }
+.not-found-card p { color: #6b7890; line-height: 1.6; }
+.not-found-link { display: inline-block; margin-top: 22px; padding: 12px 20px; border-radius: 10px; background: #6d28d9; color: #fff; text-decoration: none; font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+/* MyPatientHUB unified glass interface and complete theme tokens */
+:root{--text:#1d2a43;--muted:#7d899f;--line:rgba(123,145,180,.18);--glass-bg:rgba(255,255,255,.72);--surface:rgba(255,255,255,.62);--popover-bg:#ffffff;--hover:rgba(83,111,240,.09)}
+html[data-theme="dark"]{--text:#e7edf9;--muted:#a0aec5;--line:rgba(142,163,198,.19);--glass-bg:rgba(20,31,51,.83);--surface:rgba(11,21,38,.72);--popover-bg:#111c2e;--hover:rgba(110,132,255,.16);color-scheme:dark}
+html[data-theme="dark"] body{background:radial-gradient(ellipse at 20% 0%,#182747 0,transparent 45%),#0b1220;color:var(--text)}
+html[data-theme="dark"] .content,html[data-theme="dark"] .discovery-page,html[data-theme="dark"] .chat-page{color:var(--text)}
+html[data-theme="dark"] .discovery-hero,html[data-theme="dark"] .specialty-tile,html[data-theme="dark"] .provider-card,html[data-theme="dark"] .clinic-result,html[data-theme="dark"] .chat-panel,html[data-theme="dark"] .chat-sidebar-panel,html[data-theme="dark"] .booking-modal{background:var(--glass-bg);border-color:var(--line);color:var(--text)}
+html[data-theme="dark"] .discovery-search input,html[data-theme="dark"] .discovery-select,html[data-theme="dark"] .filter-input,html[data-theme="dark"] .booking-modal input,html[data-theme="dark"] .booking-modal select,html[data-theme="dark"] .chat-search,html[data-theme="dark"] .chat-composer{background:var(--surface);border-color:var(--line);color:var(--text)}
+html[data-theme="dark"] .search-results-popover,html[data-theme="dark"] .alerts-popover{background:var(--popover-bg);border-color:var(--line);color:var(--text)}
+html[data-theme="dark"] .app-topbar{background:var(--glass-bg);border-color:var(--line);color:var(--text)}
+html[data-theme="dark"] .app-topbar .app-search,html[data-theme="dark"] .app-topbar .app-menu-button,html[data-theme="dark"] .app-topbar .app-header-icon{background:var(--surface);border-color:var(--line);color:var(--text)}
+html[data-theme="dark"] .app-topbar input,html[data-theme="dark"] .chat-search input,html[data-theme="dark"] .chat-composer input{background:transparent!important;color:var(--text)!important}
+html[data-theme="dark"] .chat-message-bubble{background:var(--surface);border-color:var(--line);color:var(--text)}
+html[data-theme="dark"] .chat-message-row.mine .chat-message-bubble{background:linear-gradient(135deg,#526fe5,#7657ce);color:#fff}
+html[data-theme="dark"] .chat-thread{color:var(--text)}
+html[data-theme="dark"] .chat-thread:hover,html[data-theme="dark"] .chat-thread.active{background:rgba(92,121,244,.17)}
+html[data-theme="dark"] .chat-inbox-title button,html[data-theme="dark"] .chat-more-button{background:var(--surface);border-color:var(--line);color:var(--text)}
+html[data-theme="dark"] .not-found-card{background:#111c2e;color:var(--text)}
+.booking-notice{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;padding:13px 15px;border:1px solid rgba(29,181,137,.25);border-radius:12px;background:rgba(29,181,137,.09);color:#168d6d;font-size:12px}.booking-notice button{border:0;background:transparent;color:inherit;font-size:20px;cursor:pointer}
+
+/* Marketplace and pharmacy catalog visual system */
+.marketplace-main,.pharmacy-main{padding:8px 28px 28px!important;color:var(--text,#1d2a43)}
+.marketplace-title,.pharmacy-title{padding:26px!important;margin-bottom:22px!important;border:1px solid var(--line,rgba(123,145,180,.18));border-radius:23px;background:linear-gradient(120deg,rgba(91,119,242,.15),rgba(98,202,185,.1)),var(--glass-bg,rgba(255,255,255,.72));backdrop-filter:blur(18px)}
+.marketplace-title h1,.pharmacy-title h1{margin:9px 0;font-size:clamp(25px,3vw,34px);letter-spacing:-1px;color:var(--text,#1d2a43)}.marketplace-title p,.pharmacy-title p{color:var(--muted,#7d899f);font-size:12px}
+.marketplace-search-enhanced,.pharmacy-search-enhanced{display:flex;align-items:center;gap:10px;max-width:620px;margin-top:18px;padding:5px 8px 5px 13px;border:1px solid var(--line,rgba(123,145,180,.2));border-radius:13px;background:var(--surface,rgba(255,255,255,.72));color:var(--muted,#7d899f)}.marketplace-search-enhanced input,.pharmacy-search-enhanced input{flex:1;min-width:0;padding:9px 0;border:0!important;outline:0;background:transparent!important;color:var(--text,#1d2a43)!important;font-size:12px}.marketplace-search-enhanced button,.pharmacy-search-enhanced button{padding:8px 11px;border:0;border-radius:9px;background:rgba(93,120,243,.12);color:#647ef0;font-size:10px;font-weight:800;cursor:pointer}
+.marketplace-cards,.pharmacy-cards{gap:16px!important}.marketplace-card,.pharmacy-card{overflow:hidden;border:1px solid var(--line,rgba(123,145,180,.18))!important;border-radius:20px!important;background:var(--glass-bg,rgba(255,255,255,.72))!important;box-shadow:0 10px 30px rgba(34,57,95,.06)!important;transition:transform .2s,box-shadow .2s}.marketplace-card:hover,.pharmacy-card:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(34,57,95,.1)!important}.marketplace-card img,.pharmacy-card>img{object-fit:cover}.marketplace-card-info,.pharmacy-info{color:var(--text,#1d2a43)}.marketplace-card-info h3,.pharmacy-card h4,.pharmacy-card p{color:var(--text,#1d2a43)}.buy-btn{display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:.2s}.buy-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}.marketplace-table-section,.pharmacy-table-section{margin-top:24px!important;padding:20px!important;border:1px solid var(--line,rgba(123,145,180,.18));border-radius:20px;background:var(--glass-bg,rgba(255,255,255,.72));backdrop-filter:blur(16px)}.marketplace-table-section h2,.pharmacy-table-section h2{color:var(--text,#1d2a43)}.marketplace-table,.pharmacy-table{width:100%;border-collapse:collapse}.marketplace-table th,.pharmacy-table th{padding:13px 12px;background:rgba(93,120,243,.09);color:var(--text,#1d2a43);font-size:10px;text-align:left}.marketplace-table td,.pharmacy-table td{padding:12px;border-bottom:1px solid var(--line,rgba(123,145,180,.13));color:var(--text,#1d2a43);font-size:11px}.marketplace-table tr:hover td,.pharmacy-table tr:hover td{background:rgba(93,120,243,.04)}.catalog-empty{padding:18px;color:var(--muted,#7d899f);font-size:12px}
+html[data-theme="dark"] .marketplace-title,html[data-theme="dark"] .pharmacy-title,html[data-theme="dark"] .marketplace-card,html[data-theme="dark"] .pharmacy-card,html[data-theme="dark"] .marketplace-table-section,html[data-theme="dark"] .pharmacy-table-section{background:var(--glass-bg)!important;border-color:var(--line)!important;color:var(--text)!important}html[data-theme="dark"] .marketplace-title h1,html[data-theme="dark"] .pharmacy-title h1,html[data-theme="dark"] .marketplace-card-info h3,html[data-theme="dark"] .pharmacy-card h4,html[data-theme="dark"] .pharmacy-card p,html[data-theme="dark"] .marketplace-table td,html[data-theme="dark"] .pharmacy-table td{color:var(--text)!important}html[data-theme="dark"] .marketplace-search-enhanced,html[data-theme="dark"] .pharmacy-search-enhanced{background:var(--surface);border-color:var(--line)}html[data-theme="dark"] .marketplace-table th,html[data-theme="dark"] .pharmacy-table th{background:rgba(93,120,243,.18);color:var(--text)}
+@media(max-width:700px){.marketplace-main,.pharmacy-main{padding:8px 14px 22px!important}.marketplace-title,.pharmacy-title{padding:20px!important}.marketplace-table-section,.pharmacy-table-section{overflow-x:auto;padding:13px!important}}
+.pharmacy-directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.pharmacy-directory-card{display:grid;grid-template-columns:155px minmax(0,1fr);overflow:hidden;border:1px solid var(--line,rgba(123,145,180,.18));border-radius:20px;background:var(--glass-bg,rgba(255,255,255,.72));box-shadow:0 10px 30px rgba(34,57,95,.05);transition:transform .2s}.pharmacy-directory-card:hover{transform:translateY(-3px)}.pharmacy-directory-card>img{width:100%;height:100%;min-height:215px;object-fit:cover}.pharmacy-directory-body{padding:17px}.pharmacy-directory-title{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.pharmacy-directory-title h2{margin:0;font-size:14px;color:var(--text)}.pharmacy-directory-title>span{color:#d69b26;font-size:10px;font-weight:800;white-space:nowrap}.pharmacy-directory-body>p{display:flex;gap:8px;align-items:flex-start;color:var(--muted);font-size:10px;line-height:1.5}.pharmacy-directory-body>p i{color:#7083e9}.pharmacy-directory-tags{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0}.pharmacy-directory-tags span{padding:6px 8px;border-radius:8px;background:rgba(92,121,244,.1);color:#7184e7;font-size:9px}.pharmacy-directory-body .buy-btn{width:100%;padding:10px;border:0;border-radius:10px;background:linear-gradient(135deg,#627ff1,#8c70e7);color:white;font-size:10px;font-weight:800}.pharmacy-result-count{align-self:center;color:var(--muted);font-size:11px}html[data-theme="dark"] .pharmacy-directory-card{background:var(--glass-bg);border-color:var(--line)}html[data-theme="dark"] .pharmacy-directory-title h2{color:var(--text)}@media(max-width:1100px){.pharmacy-directory-grid{grid-template-columns:1fr}}@media(max-width:560px){.pharmacy-directory-card{grid-template-columns:1fr}.pharmacy-directory-card>img{height:150px;min-height:0}}

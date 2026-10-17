@@ -1,0 +1,563 @@
+/* ================================
+   LOGIN PAGE
+================================ */
+
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login-card form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.login-card .btn-primary {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.auth-message {
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #374151;
+    overflow-wrap: anywhere;
+}
+
+.auth-switch {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.auth-switch button {
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-switch button:hover {
+    text-decoration: underline;
+} 
+
+/* .about-section{
+    color: #fcfdfe;
+    background: none;
+} */
+
+
+
+
+
+
+
+
+
+.account-layout>.sidebar {
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   MyPatientHUB - Profile and Settings Pages
+   ========================================= */
+
+.account-layout {
+    display: flex;
+
+    min-height: 100vh;
+    background: #f5f7fb;
+    color: #263449;
+
+}
+
+.account-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.account-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+    flex: 1;
+}
+
+/* Page heading */
+
+.account-page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.account-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #2878d0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.account-page-heading h1 {
+    margin: 0;
+    color: #172b4d;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.account-page-heading p {
+    margin: 8px 0 0;
+    color: #738096;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Shared cards */
+
+.account-card {
+    margin-bottom: 24px;
+    padding: 26px;
+    background: #ffffff;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(31, 51, 82, 0.035);
+}
+
+.account-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.account-section-heading h2 {
+    margin: 0;
+    color: #263449;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.account-section-heading p {
+    margin: 7px 0 0;
+    color: #7b8798;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Profile summary */
+
+.profile-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #e4efff;
+    color: #2878d0;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-summary-info h2 {
+    margin: 0;
+    color: #172b4d;
+    font-size: 21px;
+}
+
+.profile-summary-info>p {
+    margin: 7px 0 10px;
+    color: #7b8798;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.profile-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #e9f8ef;
+    color: #21804b;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Profile fields */
+
+.account-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.account-field {
+    min-width: 0;
+}
+
+.account-field label {
+    display: block;
+    margin-bottom: 9px;
+    color: #4d5b70;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.account-field input,
+.account-field select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 13px;
+    border: 1px solid #dce3ed;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #263449;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-field input:focus,
+.account-field select:focus {
+    border-color: #2878d0;
+    box-shadow: 0 0 0 3px rgba(40, 120, 208, 0.12);
+}
+
+.account-field-value {
+    min-height: 22px;
+    margin: 0;
+    color: #263449;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Buttons */
+
+.account-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 0 28px;
+}
+
+.account-primary-button,
+.account-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.account-primary-button {
+    background: #2878d0;
+    color: #ffffff;
+}
+
+.account-primary-button:hover {
+    background: #1e63b0;
+}
+
+.account-secondary-button {
+    border-color: #dce3ed;
+    background: #ffffff;
+    color: #526176;
+}
+
+.account-secondary-button:hover {
+    background: #f5f7fb;
+    border-color: #c8d2e0;
+}
+
+.account-primary-button:focus-visible,
+.account-secondary-button:focus-visible {
+    outline: 3px solid rgba(40, 120, 208, 0.3);
+    outline-offset: 2px;
+}
+
+/* Feedback message */
+
+.account-message {
+    margin-bottom: 22px;
+    padding: 13px 16px;
+    border: 1px solid #c9ead6;
+    border-radius: 8px;
+    background: #effaf3;
+    color: #216e43;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Privacy reminder */
+
+.account-disclaimer {
+    margin-bottom: 28px;
+    padding: 17px 20px;
+    border: 1px solid #f0dfb2;
+    border-radius: 10px;
+    background: #fffaf0;
+}
+
+.account-disclaimer strong {
+    color: #805c17;
+    font-size: 13px;
+}
+
+.account-disclaimer p {
+    margin: 7px 0 0;
+    color: #796c52;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   Settings Page
+   ========================================= */
+
+.settings-section {
+    padding-bottom: 8px;
+}
+
+.settings-section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #edf4ff;
+    color: #2878d0;
+    font-size: 22px;
+}
+
+.settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #edf0f5;
+}
+
+.settings-option-text {
+    min-width: 0;
+}
+
+.settings-option-text h3 {
+    margin: 0;
+    color: #35445a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.settings-option-text p {
+    margin: 6px 0 0;
+    color: #7b8798;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Accessible toggle switch */
+
+.settings-switch {
+    position: relative;
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 46px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.settings-switch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.settings-slider {
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    background: #cbd3df;
+    transition: background 0.2s ease;
+}
+
+.settings-slider::before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    content: "";
+    transition: transform 0.2s ease;
+}
+
+.settings-switch input:checked+.settings-slider {
+    background: #2878d0;
+}
+
+.settings-switch input:checked+.settings-slider::before {
+    transform: translateX(20px);
+}
+
+.settings-switch input:focus-visible+.settings-slider {
+    outline: 3px solid rgba(40, 120, 208, 0.3);
+    outline-offset: 3px;
+}
+
+.settings-note {
+    margin: 12px 0 18px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #f5f8fc;
+    color: #68768a;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.settings-note strong {
+    color: #35445a;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .account-container {
+        padding: 24px 18px;
+    }
+
+    .account-page-heading h1 {
+        font-size: 26px;
+    }
+
+    .account-card {
+        padding: 21px;
+    }
+
+    .account-fields-grid {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 520px) {
+    .account-container {
+        padding: 20px 14px;
+    }
+
+    .account-page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .account-page-heading h1 {
+        font-size: 24px;
+    }
+
+    .account-page-heading>.account-primary-button {
+        align-self: stretch;
+    }
+
+    .profile-summary {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .profile-avatar {
+        width: 58px;
+        height: 58px;
+        font-size: 20px;
+    }
+
+    .profile-summary-info h2 {
+        font-size: 17px;
+    }
+
+    .account-fields-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .account-card {
+        padding: 18px;
+        border-radius: 11px;
+    }
+
+    .account-section-heading h2 {
+        font-size: 16px;
+    }
+
+    .settings-option {
+        gap: 12px;
+    }
+
+    .settings-option-text h3 {
+        font-size: 13px;
+    }
+
+    .settings-option-text p {
+        font-size: 11px;
+    }
+
+    .account-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .account-form-actions button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .account-layout *,
+    .account-layout *::before,
+    .account-layout *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+

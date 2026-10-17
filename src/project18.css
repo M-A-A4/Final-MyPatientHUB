@@ -1,0 +1,654 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* =========================================
+   LOGIN PAGE
+   Used by components/Login.js
+========================================= */
+
+.hero {
+  min-height: 100vh;
+  background-image: url("hello.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.login-card {
+  width: 400px;
+  max-width: 100%;
+  background: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icons button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #f0f0f0;
+}
+
+.login-card input[type="email"],
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.options {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.options input {
+  width: auto;
+  margin-right: 6px;
+}
+
+.options a {
+  text-decoration: none;
+  color: #4f46e5;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #3730a3;
+}
+
+.about-section {
+  background: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.about-section h2 {
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+/* Login page footer */
+
+.footer {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #4f46e5;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   SHARED PAGE LAYOUT
+   Used by dashboard and several inner pages
+========================================= */
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+}
+
+/* =========================================
+   FIND DOCTOR / FIND CLINIC BANNER
+========================================= */
+
+.doctor-banner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("pink.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 70px 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.doctor-banner h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.doctor-banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.banner-search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.banner-search input {
+  width: 250px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.banner-search button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #00c2ff;
+  color: white;
+  cursor: pointer;
+}
+
+.service-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.service-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #f8f9fb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-card {
+  position: relative;
+}
+
+.arrow-link {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 35px;
+  height: 35px;
+  background: #8e44ad;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.arrow-link:hover {
+  background: #6c3483;
+}
+
+/* =========================================
+   DOCTOR LIST / MAP / FILTERS
+========================================= */
+
+.view-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.view-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #e5e7eb;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: #e2e8f0;
+}
+
+.active-btn {
+  background: #8e44ad;
+  color: white;
+}
+
+.view-btn i {
+  margin-right: 6px;
+}
+
+.doctor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.doctor-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-info {
+  flex: 1;
+}
+
+.doctor-info h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.doctor-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.map-container {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+  border-radius: 12px;
+}
+
+.map-container iframe,
+.clinic-content iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+.clinic-content iframe {
+  height: 450px;
+}
+
+/* =========================================
+   FIND CLINIC LAYOUT / FILTERS
+========================================= */
+
+.clinic-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.clinic-filters {
+  width: 260px;
+  flex-shrink: 0;
+  background: #f8f9fb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clinic-filters input,
+.clinic-filters select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.clinic-filters h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.clinic-filters p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.clinic-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* =========================================
+   FIND CLINIC LIST / CARDS
+========================================= */
+
+.clinic-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clinic-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.clinic-info {
+  flex: 1;
+}
+
+.clinic-info h3 {
+  margin-bottom: 8px;
+}
+
+.clinic-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.clinic-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clinic-buttons button {
+  background: #8e44ad;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.clinic-buttons button:hover {
+  background: #6c3483;
+}
+
+/* =========================================
+   RESPONSIVE DOCTOR / CLINIC / LOGIN LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    width: 90%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .doctor-banner h1 {
+    font-size: 32px;
+  }
+
+  .banner-search input {
+    width: 100%;
+  }
+
+  .doctor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .view-buttons {
+    justify-content: center;
+  }
+
+  .clinic-layout {
+    flex-direction: column;
+  }
+
+  .clinic-filters {
+    width: 100%;
+  }
+
+  .clinic-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clinic-buttons {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE SIDEBAR
+   Dashboard, Pharmacy, Marketplace,
+   Settings, and My Dependents
+========================================= */
+
+
+@media (max-width: 760px) {
+  .dashboard-container,
+  .pharmacy-page,
+  .marketplace-page,
+  .account-layout {
+    position: relative;
+    overflow-x: clip;
+  }
+
+  .dashboard-container .sidebar,
+  .pharmacy-page .sidebar,
+  .marketplace-page .sidebar,
+  .account-layout .sidebar {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 85vw;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 8px 0 25px rgba(30, 45, 70, 0.15);
+    transform: translateX(-110%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.25s ease, visibility 0.25s ease;
+    z-index: 200;
+  }
+
+  .dashboard-container.mobile-sidebar-open .sidebar,
+  .pharmacy-page.mobile-sidebar-open .sidebar,
+  .marketplace-page.mobile-sidebar-open .sidebar,
+  .account-layout.mobile-sidebar-open .sidebar {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .dashboard-container .sidebar nav a span,
+  .pharmacy-page .sidebar nav a span,
+  .marketplace-page .sidebar nav a span,
+  .account-layout .sidebar nav a span {
+    display: inline !important;
+  }
+
+  .dashboard-container .sidebar nav a,
+  .pharmacy-page .sidebar nav a,
+  .marketplace-page .sidebar nav a,
+  .account-layout .sidebar nav a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .dashboard-container .sidebar nav a i,
+  .pharmacy-page .sidebar nav a i,
+  .marketplace-page .sidebar nav a i,
+  .account-layout .sidebar nav a i {
+    display: inline-block !important;
+    flex-shrink: 0;
+  }
+
+  .dashboard-container > .content,
+  .pharmacy-page > .content,
+  .marketplace-page > .content,
+  .account-layout > .account-main {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .dashboard-container .app-topbar,
+  .pharmacy-page .app-topbar,
+  .marketplace-page .app-topbar,
+  .account-layout .app-topbar,
+  .dashboard-container .settings-topbar {
+    position: relative;
+    z-index: 210;
+  }
+
+  .dashboard-container .app-menu-button,
+  .pharmacy-page .app-menu-button,
+  .marketplace-page .app-menu-button,
+  .account-layout .app-menu-button,
+  .dashboard-container .settings-menu-toggle {
+    position: relative;
+    z-index: 220;
+  }
+
+  .dashboard-container.mobile-sidebar-open::after,
+  .pharmacy-page.mobile-sidebar-open::after,
+  .marketplace-page.mobile-sidebar-open::after,
+  .account-layout.mobile-sidebar-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 29, 48, 0.35);
+    z-index: 190;
+  }
+}
