@@ -1,0 +1,638 @@
+
+/* ==========================================
+   MyPatientHUB - Animated Healthcare Dashboard
+   All styles are scoped to .dh-dashboard
+   ========================================== */
+
+.dh-dashboard {
+  --dh-primary: #394c83;
+  --dh-muted: #8490a8;
+  --dh-border: #edf0f5;
+  --dh-background: #f5f7fa;
+
+  display: flex;
+  min-height: 100vh;
+  background: var(--dh-background);
+  color: #344363;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dh-dashboard *,
+.dh-dashboard *::before,
+.dh-dashboard *::after {
+  box-sizing: border-box;
+}
+
+.dh-dashboard .content.dh-content {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  background: var(--dh-background);
+}
+
+.dh-page {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 14px 0 24px;
+  flex: 1;
+  animation: dh-page-enter 0.65s ease both;
+}
+
+@keyframes dh-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+.dh-welcome {
+  margin: 0 0 16px;
+  padding: 10px 35px;
+  padding-bottom: 60px;
+ background: linear-gradient(135deg, #667eea, #d634a0, #764ba2 );
+ border-radius: 10px;
+ color: #f5f7fa;
+
+
+} */
+
+.dh-welcome {
+  margin: 0 0 16px;
+  padding: 20px 35px;
+
+
+}
+
+.dh-welcome h1 {
+  font-size: 24px;
+
+  margin: 0 0 5px;
+  font-weight: 700;
+}
+
+.dh-welcome p {
+  font-size: 16px;
+
+  margin: 0;
+}
+
+/* Main dashboard grids */
+
+.dh-promotion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.dh-middle-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+  align-items: stretch;
+}
+
+.dh-trends-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.dh-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Cards */
+
+.dh-dashboard .dh-card {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid rgba(230, 234, 242, 0.65);
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(39, 55, 91, 0.055);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  animation: dh-card-enter 0.7s ease both;
+}
+
+.dh-dashboard .dh-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(39, 55, 91, 0.10);
+}
+
+@keyframes dh-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dh-dashboard .dh-promotion-grid > .dh-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.dh-dashboard .dh-promotion-grid > .dh-card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.dh-dashboard .dh-promotion-grid > .dh-card:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.dh-dashboard .dh-card h3 {
+  color: #344363;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dh-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.dh-info-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d8dfeb;
+  border-radius: 50%;
+  color: #8496b5;
+  background: white;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.dh-info-button:hover {
+  color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Animated promotion donut charts */
+
+.dh-promotion-card {
+  min-height: 270px;
+}
+
+.dh-promotion-content {
+  display: grid;
+  grid-template-columns: minmax(105px, 0.9fr) minmax(0, 1.35fr);
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.dh-donut {
+  width: 100%;
+  height: 145px;
+  min-width: 0;
+}
+
+.dh-legend-list {
+  min-width: 0;
+}
+
+.dh-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 35px;
+  padding: 6px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.dh-legend-row:last-child {
+  border-bottom: none;
+}
+
+.dh-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.dh-legend-name {
+  min-width: 0;
+  flex: 1;
+  color: #354566;
+  font-size: 10px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.dh-legend-value {
+  flex-shrink: 0;
+  color: #71809d;
+  font-size: 10px;
+}
+
+.dh-details-button {
+  display: block;
+  min-height: 27px;
+  padding: 7px 17px;
+  margin: 6px 0 0 4px;
+  border: 0;
+  border-radius: 5px;
+  background: #8397bb;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 7px rgba(55, 74, 116, 0.13);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dh-details-button:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+/* Health index */
+
+.dh-health-index {
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+}
+
+.dh-index-number {
+  margin-top: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #344363;
+}
+
+.dh-index-number span,
+.dh-trend-value span {
+  color: #21a947;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.dh-health-chart {
+  width: 100%;
+  height: 165px;
+  margin-top: 8px;
+}
+
+.dh-muted {
+  margin: 5px 0 0;
+  color: #8994a8;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* Map */
+
+.dh-map-card {
+  min-height: 400px;
+}
+
+.dh-map-badge {
+  color: #4f46e5;
+  background: #efefff;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.dh-map-card iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 9px;
+  background: #edf1f5;
+}
+
+/* Appointments */
+
+.dh-appointments-card {
+  min-height: 400px;
+}
+
+.dh-appointment-list {
+  margin-top: 8px;
+}
+
+.dh-appointment-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f5;
+  min-width: 0;
+}
+
+.dh-doctor-avatar {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e1e9f9, #c7d3eb);
+  color: #394c83;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(39, 55, 91, 0.08);
+}
+
+.dh-doctor-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 5px;
+}
+
+.dh-doctor-info strong {
+  font-size: 11px;
+  color: #344363;
+  font-weight: 700;
+}
+
+.dh-doctor-info span {
+  color: #8490a8;
+  font-size: 10px;
+}
+
+.dh-appointment-date {
+  flex-shrink: 0;
+  max-width: 115px;
+  text-align: right;
+  color: #8490a8;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.dh-upcoming-title {
+  margin-top: 19px !important;
+}
+
+.dh-period-switch {
+  display: flex;
+  width: 100%;
+  padding: 3px;
+  gap: 3px;
+  margin-top: 12px;
+  border-radius: 7px;
+  background: #b0dce9;
+}
+
+.dh-period-switch button {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 4px;
+  color: #344363;
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dh-period-switch button.active {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(39, 55, 91, 0.10);
+}
+
+.dh-upcoming-row {
+  border-bottom: none;
+}
+
+/* Trend cards */
+
+.dh-trend-card {
+  min-height: 185px;
+}
+
+.dh-trend-value {
+  margin-top: 5px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #344363;
+}
+
+.dh-trend-chart {
+  width: 100%;
+  height: 105px;
+  margin-top: 8px;
+}
+
+/* Radar and bar charts */
+
+.dh-wellness-card,
+.dh-statistics-card {
+  min-height: 340px;
+}
+
+.dh-radar-chart,
+.dh-bar-chart {
+  width: 100%;
+  height: 275px;
+  margin-top: 8px;
+}
+
+.dh-wellness-card .recharts-legend-item-text,
+.dh-statistics-card .recharts-legend-item-text {
+  color: #66758f !important;
+  font-size: 10px;
+}
+
+.dh-dashboard .recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.dh-dashboard .recharts-default-tooltip {
+  border: 1px solid #edf0f5 !important;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(39, 55, 91, 0.10);
+}
+
+/* Footer stays below the dashboard */
+
+.dh-dashboard .footer {
+  margin-top: 12px;
+  flex-shrink: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .dh-dashboard .content.dh-content {
+    padding: 0 9px;
+  }
+
+  .dh-middle-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dh-promotion-content {
+    grid-template-columns: minmax(90px, 0.8fr) minmax(0, 1.2fr);
+    gap: 8px;
+  }
+
+  .dh-donut {
+    height: 125px;
+  }
+
+  .dh-legend-name {
+    font-size: 9px;
+  }
+
+  .dh-legend-row {
+    gap: 5px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .dh-dashboard .content.dh-content {
+    width: 100%;
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  .dh-page {
+    padding-top: 12px;
+  }
+
+  .dh-welcome h1 {
+    font-size: 18px;
+  }
+
+  .dh-promotion-grid,
+  .dh-middle-grid,
+  .dh-trends-grid,
+  .dh-bottom-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .dh-promotion-card,
+  .dh-health-index {
+    min-height: 245px;
+  }
+
+  .dh-promotion-content {
+    grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .dh-donut {
+    height: 150px;
+  }
+
+  .dh-legend-name {
+    font-size: 10px;
+  }
+
+  .dh-map-card,
+  .dh-appointments-card {
+    min-height: auto;
+  }
+
+  .dh-map-card iframe {
+    height: 270px;
+  }
+
+  .dh-trend-card {
+    min-height: 170px;
+  }
+
+  .dh-wellness-card,
+  .dh-statistics-card {
+    min-height: 320px;
+  }
+
+  .dh-radar-chart,
+  .dh-bar-chart {
+    height: 260px;
+  }
+
+  .dh-dashboard .footer {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .dh-dashboard .dh-card {
+    padding: 12px;
+  }
+
+  .dh-promotion-content {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .dh-donut {
+    height: 115px;
+  }
+
+  .dh-legend-row {
+    min-height: 32px;
+  }
+
+  .dh-legend-name,
+  .dh-legend-value {
+    font-size: 9px;
+  }
+
+  .dh-appointment-row {
+    gap: 7px;
+  }
+
+  .dh-doctor-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .dh-appointment-date {
+    max-width: 90px;
+    font-size: 8px;
+  }
+}
+
+/* Respect accessibility preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .dh-dashboard *,
+  .dh-dashboard *::before,
+  .dh-dashboard *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

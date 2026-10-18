@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MyPatientHUB</title>
+  <script>
+    const path = window.location.pathname;
+    const repo = "/Final-MyPatientHUB";
+
+    if (path.startsWith(repo)) {
+      const newPath = path.replace(repo, "") || "/";
+      window.location.replace(
+        repo + "/?redirect=" + encodeURIComponent(newPath)
+      );
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,245 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
+import "./Marketplace.css";
+function Marketplace() {
+  const navigate = useNavigate();
+
+  const [searchText, setSearchText] = useState("");
+  const [entriesPerPage, setEntriesPerPage] = useState(7);
+
+  
+
+  const marketplaceCards = [
+    {
+      title: "Food Panda",
+      price: "5 RM",
+      image: process.env.PUBLIC_URL + "/images/food3.png",
+    },
+    {
+      title: "Grab Food",
+      price: "10 RM",
+      image: process.env.PUBLIC_URL + "/images/food2.png",
+    },
+    {
+      title: "Deliveroo",
+      price: "15 RM",
+      image: process.env.PUBLIC_URL + "/images/food4.png",
+    },
+    {
+      title: "Minimalist",
+      price: "20 RM",
+      image: process.env.PUBLIC_URL + "/images/food5.png",
+    },
+  ];
+
+  const products = [
+    {
+      id: "243598234",
+      name: "Healthy Diet",
+      category: "Food",
+      service: "Food Panda",
+      discount: "0",
+      price: "10 RM",
+            image: process.env.PUBLIC_URL + "/images/food3.png",
+    },
+    {
+      id: "877712",
+      name: "Healthy Diet",
+      category: "Food",
+      service: "Grab Food",
+      discount: "5",
+      price: "9 RM",
+            image: process.env.PUBLIC_URL + "/images/food5.png",
+    },
+    {
+      id: "0134729",
+      name: "Healthy Diet",
+      category: "Food",
+      service: "Deliveroo",
+      discount: "9",
+      price: "25 RM",
+            image: process.env.PUBLIC_URL + "/images/food2.png",
+    },
+    {
+      id: "113213",
+      name: "Healthy Diet",
+      category: "Food",
+      service: "Food Panda",
+      discount: "5",
+      price: "15 RM",
+            image: process.env.PUBLIC_URL + "/images/food3.png",
+    },
+    {
+      id: "634729",
+      name: "Healthy Diet",
+      category: "Food",
+      service: "Food Panda",
+      discount: "7",
+      price: "25 RM",
+            image: process.env.PUBLIC_URL + "/images/food4.png",
+    },
+    {
+      id: "6347292",
+      name: "Healthy Diet",
+      category: "Food",
+      service: "Food Panda",
+      discount: "0",
+      price: "20 RM",
+            image: process.env.PUBLIC_URL + "/images/food5.png",
+    },
+  ];
+
+  const filteredProducts = products.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.category.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.service.toLowerCase().includes(searchText.toLowerCase())
+  );
+
+  const visibleProducts = filteredProducts.slice(
+    0,
+    entriesPerPage
+  );
+
+  return (
+    <div className="marketplace-page">
+
+      
+
+      <main className="content">
+          
+      <div className="marketplace-main">
+
+        
+
+        <div className="marketplace-title">
+
+          <h1>Marketplace</h1>
+
+          <p>
+            Search marketplaces and order what you need.
+          </p>
+
+        </div>
+
+        <div className="marketplace-cards">
+
+          {marketplaceCards.map((card, index) => (
+
+            <div
+              className="marketplace-card"
+              key={index}
+            >
+
+              <img
+                src={card.image}
+                alt={card.title}
+              />
+
+              <div className="marketplace-card-info">
+
+                <div className="marketplace-card-top">
+
+                  <h3>{card.title}</h3>
+
+                  <span>{card.price}</span>
+
+                </div>
+
+                <p>Healthy Diet</p>
+
+                <button
+                className="buy-btn"
+                onClick={() => navigate("/login")}
+                >
+                Buy Now
+                </button>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        <div className="marketplace-table-section">
+
+          <h2>Other Results</h2>
+
+          <div className="entries-control">
+
+            <select
+              value={entriesPerPage}
+              onChange={(e) =>
+                setEntriesPerPage(
+                  Number(e.target.value)
+                )
+              }
+            >
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+            </select>
+
+            <span>entries per page</span>
+
+          </div>
+
+          <table className="marketplace-table">
+
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Service By</th>
+                <th>Discount</th>
+                <th>Price</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              {visibleProducts.map((item, index) => (
+
+                <tr key={index}>
+                  <td>
+                    <div className="product-name">
+                        <img
+                        src={item.image}
+                        alt="Food"
+                        className="product-img"
+                        />
+                        <span>{item.name}</span>
+                    </div>
+                    </td>
+                  <td>{item.category}</td>
+                  <td>{item.service}</td>
+                  <td>{item.discount}</td>
+                  <td>{item.price}</td>
+                  <td>{item.id}</td>
+                </tr>
+
+              ))}
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <Footer />
+
+      </div>
+      </main>
+
+    </div>
+  );
+}
+
+export default Marketplace;

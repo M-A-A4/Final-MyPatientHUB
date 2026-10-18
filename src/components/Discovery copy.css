@@ -1,0 +1,723 @@
+/* =========================================
+   1. MAIN DISCOVERY PAGE
+========================================= */
+
+.discovery-page {
+    min-width: 0;
+    flex: 1;
+    padding: 22px 28px 28px;
+    color: var(--text, #1d2a43);
+}
+
+
+/* =========================================
+   2. HERO SECTION
+========================================= */
+
+.discovery-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+
+    border: 1px solid var(--line, rgba(123, 145, 180, 0.18));
+    border-radius: 24px;
+
+    background:
+        linear-gradient(120deg,
+            rgba(89, 119, 244, 0.17),
+            rgba(107, 206, 197, 0.12)),
+        var(--glass-bg, rgba(255, 255, 255, 0.68));
+
+    backdrop-filter: blur(18px);
+    box-shadow: 0 14px 40px rgba(36, 60, 110, 0.06);
+}
+
+.discovery-hero::after {
+    position: absolute;
+    top: -70px;
+    right: -40px;
+
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            rgba(112, 133, 255, 0.25),
+            transparent 68%);
+
+    content: "";
+    pointer-events: none;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #637ff0;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.discovery-hero h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 10px 0 8px;
+
+    font-size: clamp(25px, 3vw, 34px);
+    letter-spacing: -1.2px;
+}
+
+.discovery-hero p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 620px;
+    margin: 0;
+
+    color: var(--muted, #7d899f);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   3. SEARCH BAR
+========================================= */
+
+.discovery-search {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    gap: 10px;
+
+    max-width: 760px;
+    margin-top: 22px;
+}
+
+.discovery-search input,
+.discovery-select,
+.filter-input {
+    min-width: 0;
+    padding: 13px 14px;
+
+    border: 1px solid var(--line, rgba(123, 145, 180, 0.2));
+    border-radius: 13px;
+    outline: none;
+
+    background: var(--surface, rgba(255, 255, 255, 0.72));
+    color: var(--text, #1d2a43);
+
+    font: inherit;
+    font-size: 12px;
+}
+
+.discovery-search input {
+    flex: 1;
+}
+
+.discovery-search input:focus,
+.discovery-select:focus,
+.filter-input:focus {
+    border-color: #637df0;
+    box-shadow: 0 0 0 3px rgba(99, 125, 240, 0.12);
+}
+
+
+/* =========================================
+   4. PRIMARY BUTTON
+========================================= */
+
+.primary-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 17px;
+
+    border: 0;
+    border-radius: 13px;
+
+    background: linear-gradient(135deg, #5e7bf2, #8368e8);
+    box-shadow: 0 8px 20px rgba(91, 117, 237, 0.23);
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.primary-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(91, 117, 237, 0.3);
+}
+
+
+/* =========================================
+   5. SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 14px;
+
+    margin: 28px 0 15px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: 18px;
+    letter-spacing: -0.4px;
+}
+
+.section-heading p {
+    margin: 5px 0 0;
+
+    color: var(--muted, #7d899f);
+    font-size: 11px;
+}
+
+
+/* =========================================
+   6. SPECIALTY GRID
+========================================= */
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.specialty-tile,
+.provider-card,
+.clinic-result,
+.chat-panel,
+.chat-sidebar-panel {
+    border: 1px solid var(--line, rgba(123, 145, 180, 0.18));
+    border-radius: 19px;
+
+    background: var(--glass-bg, rgba(255, 255, 255, 0.68));
+
+    backdrop-filter: blur(16px);
+    box-shadow: 0 9px 28px rgba(35, 58, 103, 0.045);
+}
+
+.specialty-tile {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 17px 14px;
+
+    text-align: left;
+    color: var(--text, #1d2a43);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.specialty-tile:hover,
+.specialty-tile.selected {
+    border-color: rgba(93, 120, 243, 0.5);
+
+    background: linear-gradient(135deg,
+            rgba(92, 121, 244, 0.16),
+            rgba(103, 198, 187, 0.1));
+
+    transform: translateY(-2px);
+}
+
+.specialty-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 14px;
+
+    background: rgba(92, 121, 244, 0.13);
+    color: #657cf0;
+
+    font-size: 17px;
+}
+
+.specialty-tile strong,
+.specialty-tile small {
+    display: block;
+}
+
+.specialty-tile strong {
+    font-size: 12px;
+}
+
+.specialty-tile small {
+    margin-top: 5px;
+
+    color: var(--muted, #7d899f);
+    font-size: 10px;
+}
+
+.specialty-tile .tile-arrow {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    color: #7587c8;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   7. RESULTS TOOLBAR
+========================================= */
+
+.results-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin: 22px 0 13px;
+}
+
+.results-toolbar strong {
+    font-size: 13px;
+}
+
+.results-toolbar span {
+    color: var(--muted, #7d899f);
+    font-size: 11px;
+}
+
+
+/* =========================================
+   8. SECONDARY BUTTON
+========================================= */
+
+.secondary-action {
+    padding: 9px 11px;
+
+    border: 1px solid rgba(95, 121, 239, 0.28);
+    border-radius: 10px;
+
+    background: rgba(95, 121, 239, 0.09);
+    color: #6880ed;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.secondary-action:hover {
+    background: #637df0;
+    color: #fff;
+}
+
+
+/* =========================================
+   9. DOCTOR AND CLINIC GRIDS
+========================================= */
+
+.provider-grid,
+.clinic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+
+/* =========================================
+   10. DOCTOR CARDS
+========================================= */
+
+.provider-card {
+    overflow: hidden;
+    padding: 17px;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+.provider-card:hover,
+.clinic-result:hover {
+    border-color: rgba(93, 120, 243, 0.42);
+    transform: translateY(-3px);
+}
+
+.provider-top {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.provider-avatar {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 17px;
+
+    object-fit: cover;
+    background: rgba(92, 121, 244, 0.1);
+}
+
+.provider-name {
+    min-width: 0;
+    flex: 1;
+}
+
+.provider-name h3 {
+    margin: 0 0 5px;
+    font-size: 13px;
+}
+
+.provider-name p {
+    margin: 0;
+
+    color: var(--muted, #7d899f);
+    font-size: 10px;
+}
+
+.rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 5px 7px;
+
+    border-radius: 8px;
+
+    background: rgba(245, 181, 58, 0.14);
+    color: #d69b26;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   11. DOCTOR DETAILS
+========================================= */
+
+.provider-meta {
+    display: grid;
+    gap: 8px;
+
+    margin: 15px 0;
+    padding: 13px 0;
+
+    border-top: 1px solid var(--line, rgba(123, 145, 180, 0.14));
+    border-bottom: 1px solid var(--line, rgba(123, 145, 180, 0.14));
+
+    color: var(--muted, #7d899f);
+    font-size: 10px;
+}
+
+.provider-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.provider-meta i {
+    width: 13px;
+    color: #6e83e8;
+}
+
+
+/* =========================================
+   12. DOCTOR CARD FOOTER AND FEES
+========================================= */
+
+.provider-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.provider-fee {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.provider-fee small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--muted, #7d899f);
+    font-size: 9px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   13. EMPTY SEARCH RESULTS
+========================================= */
+
+.empty-results {
+    grid-column: 1 / -1;
+
+    padding: 30px;
+
+    border: 1px dashed var(--line, rgba(123, 145, 180, 0.28));
+    border-radius: 18px;
+
+    text-align: center;
+    color: var(--muted, #7d899f);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   14. FILTER ROW
+========================================= */
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 18px 0;
+}
+
+.filter-row .filter-input {
+    min-width: 160px;
+    flex: 1;
+}
+
+
+/* =========================================
+   15. CLINIC RESULT CARDS
+========================================= */
+
+.clinic-result {
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.clinic-result img {
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+}
+
+.clinic-result-body {
+    padding: 16px;
+}
+
+.clinic-result-body h3 {
+    margin: 0 0 7px;
+    font-size: 14px;
+}
+
+.clinic-result-body p {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+
+    margin: 7px 0;
+
+    color: var(--muted, #7d899f);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.clinic-result-body p i {
+    color: #6f83ec;
+}
+
+.clinic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    margin: 12px 0;
+}
+
+.clinic-tags span {
+    padding: 5px 7px;
+
+    border-radius: 7px;
+
+    background: rgba(92, 121, 244, 0.1);
+    color: #7083e9;
+
+    font-size: 9px;
+}
+
+.clinic-result-body .primary-action {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   16. APPOINTMENT MODAL
+========================================= */
+
+.booking-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    display: grid;
+    place-items: center;
+
+    padding: 20px;
+
+    background: rgba(16, 25, 45, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+.booking-modal {
+    width: min(470px, 100%);
+    padding: 25px;
+
+    border: 1px solid var(--line, rgba(123, 145, 180, 0.2));
+    border-radius: 24px;
+
+    background: var(--popover-bg, #fff);
+    color: var(--text, #1d2a43);
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+}
+
+.booking-modal h2 {
+    margin: 0 0 7px;
+    font-size: 22px;
+}
+
+.booking-modal p {
+    color: var(--muted, #7d899f);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.booking-modal label {
+    display: grid;
+    gap: 7px;
+
+    margin-top: 14px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.booking-modal input,
+.booking-modal select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid var(--line, rgba(123, 145, 180, 0.2));
+    border-radius: 11px;
+
+    background: var(--surface, rgba(255, 255, 255, 0.7));
+    color: var(--text, #1d2a43);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.cancel-action {
+    padding: 11px 14px;
+
+    border: 1px solid var(--line, rgba(123, 145, 180, 0.2));
+    border-radius: 12px;
+
+    background: transparent;
+    color: var(--text, #1d2a43);
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   17. RESPONSIVE DESIGN: TABLETS
+========================================= */
+
+@media (max-width: 1050px) {
+    .specialty-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .provider-grid,
+    .clinic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================
+   18. RESPONSIVE DESIGN: MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .discovery-page {
+        padding: 10px 14px 22px;
+    }
+
+    .discovery-hero {
+        padding: 21px;
+    }
+
+    .discovery-search {
+        flex-direction: column;
+    }
+
+    .specialty-grid,
+    .provider-grid,
+    .clinic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .results-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+
+.discovery-hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("pink.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    padding-bottom: 60px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
