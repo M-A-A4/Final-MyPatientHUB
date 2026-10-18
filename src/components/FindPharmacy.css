@@ -96,6 +96,7 @@
     height:180px;
     object-fit:contain;
     margin-bottom:10px;
+    border-radius: 20px;
 }
 
 .pharmacy-card p{
@@ -105,7 +106,7 @@
 }
 
 .price{
-    color:#00bcd4;
+    color:#4f46e5;
     font-size:20px;
     font-weight:bold;
     margin:10px 0;
@@ -153,7 +154,7 @@
 
 .buy-btn{
     margin-top:12px;
-    background:#e600a8;
+    background:#ac0187;
     color:white;
     border:none;
     border-radius:8px;

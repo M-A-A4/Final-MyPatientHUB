@@ -17,22 +17,22 @@ function Marketplace() {
     {
       title: "Food Panda",
       price: "5 RM",
-      image: process.env.PUBLIC_URL + "/images/food.jpeg",
+      image: process.env.PUBLIC_URL + "/images/food3.png",
     },
     {
       title: "Grab Food",
       price: "10 RM",
-      image: process.env.PUBLIC_URL + "/images/food.jpeg",
+      image: process.env.PUBLIC_URL + "/images/food2.png",
     },
     {
       title: "Deliveroo",
       price: "15 RM",
-      image: process.env.PUBLIC_URL + "/images/food.jpeg",
+      image: process.env.PUBLIC_URL + "/images/food4.png",
     },
     {
       title: "Minimalist",
       price: "20 RM",
-      image: process.env.PUBLIC_URL + "/images/food.jpeg",
+      image: process.env.PUBLIC_URL + "/images/food5.png",
     },
   ];
 
@@ -44,6 +44,7 @@ function Marketplace() {
       service: "Food Panda",
       discount: "0",
       price: "10 RM",
+            image: process.env.PUBLIC_URL + "/images/food3.png",
     },
     {
       id: "877712",
@@ -52,6 +53,7 @@ function Marketplace() {
       service: "Grab Food",
       discount: "5",
       price: "9 RM",
+            image: process.env.PUBLIC_URL + "/images/food5.png",
     },
     {
       id: "0134729",
@@ -60,6 +62,7 @@ function Marketplace() {
       service: "Deliveroo",
       discount: "9",
       price: "25 RM",
+            image: process.env.PUBLIC_URL + "/images/food2.png",
     },
     {
       id: "113213",
@@ -68,6 +71,7 @@ function Marketplace() {
       service: "Food Panda",
       discount: "5",
       price: "15 RM",
+            image: process.env.PUBLIC_URL + "/images/food3.png",
     },
     {
       id: "634729",
@@ -76,6 +80,7 @@ function Marketplace() {
       service: "Food Panda",
       discount: "7",
       price: "25 RM",
+            image: process.env.PUBLIC_URL + "/images/food4.png",
     },
     {
       id: "6347292",
@@ -84,6 +89,7 @@ function Marketplace() {
       service: "Food Panda",
       discount: "0",
       price: "20 RM",
+            image: process.env.PUBLIC_URL + "/images/food5.png",
     },
   ];
 
@@ -208,7 +214,7 @@ function Marketplace() {
                   <td>
                     <div className="product-name">
                         <img
-                        src={process.env.PUBLIC_URL + "/images/food.jpeg"}
+                        src={item.image}
                         alt="Food"
                         className="product-img"
                         />

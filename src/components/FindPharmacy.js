@@ -19,21 +19,25 @@ function FindPharmacy() {
       pharmacy: "Carry Medical",
       image: process.env.PUBLIC_URL + "/images/ph1.jpg",
       price: "10 RM",
+            image1: process.env.PUBLIC_URL + "/images/drug1.png",
     },
     {
       pharmacy: "Pool Medical",
       image: process.env.PUBLIC_URL + "/images/ph2.jpg",
       price: "9 RM",
+            image1: process.env.PUBLIC_URL + "/images/drug2.png",
     },
     {
       pharmacy: "OK Pharmacy",
       image: process.env.PUBLIC_URL + "/images/ph3.jpg",
       price: "8 RM",
+            image1: process.env.PUBLIC_URL + "/images/drug.png",      image: process.env.PUBLIC_URL + "/images/drug3.png",
     },
     {
       pharmacy: "Hamza Pharma",
       image: process.env.PUBLIC_URL + "/images/ph4.jpg",
       price: "11 RM",
+            image1: process.env.PUBLIC_URL + "/images/drug3.png",
     },
   ];
 
@@ -45,6 +49,7 @@ function FindPharmacy() {
       service: "Caring Pharmacy",
       discount: "1",
       price: "5 RM",
+            image: process.env.PUBLIC_URL + "/images/drug1.png",
     },
     {
       id: "872",
@@ -53,6 +58,7 @@ function FindPharmacy() {
       service: "OK Pharmacy",
       discount: "3",
       price: "9 RM",
+            image: process.env.PUBLIC_URL + "/images/drug2.png",
     },
     {
       id: "0134",
@@ -61,6 +67,7 @@ function FindPharmacy() {
       service: "Hilton Medical",
       discount: "5",
       price: "7 RM",
+            image: process.env.PUBLIC_URL + "/images/drug3.png",
     },
     {
       id: "113",
@@ -69,6 +76,7 @@ function FindPharmacy() {
       service: "Hinucion Pharma",
       discount: "5",
       price: "9 RM",
+            image: process.env.PUBLIC_URL + "/images/drug4.png",
     },
     {
       id: "629",
@@ -77,6 +85,7 @@ function FindPharmacy() {
       service: "Hamza Medical Pharmacy",
       discount: "7",
       price: "20 RM",
+            image: process.env.PUBLIC_URL + "/images/drug1.png",
     },
     {
       id: "634729",
@@ -85,6 +94,7 @@ function FindPharmacy() {
       service: "Food Panda",
       discount: "0",
       price: "20 RM",
+            image: process.env.PUBLIC_URL + "/images/drug2.png",
     },
   ];
 
@@ -120,7 +130,7 @@ function FindPharmacy() {
             <div className="pharmacy-card" key={index}>
 
               <img
-                src={process.env.PUBLIC_URL + "/images/ESSO.png"}
+                src={item.image1}
                 alt="Esso"
               />
 
@@ -223,7 +233,7 @@ function FindPharmacy() {
                     <div className="medicine-name">
 
                       <img
-                        src={process.env.PUBLIC_URL + "/images/ESSO.png"}
+                        src={item.image}
                         alt="Esso"
                         className="medicine-img"
                       />

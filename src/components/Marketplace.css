@@ -92,11 +92,11 @@
 }
 
 .marketplace-card-top span{
-    color:#00bcd4;
+    color:#4f46e5;
     font-weight:bold;
 }
 
-.buy-btn{
+button .buy-btn{
     margin-top:10px;
     background:#4f46e5;
     color:white;

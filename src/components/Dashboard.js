@@ -192,10 +192,12 @@ function Dashboard() {
       <Sidebar />
 
       <main className="content dh-content">
-        <Header />
+      
 
         <div className="dh-page">
+          
           <section className="dh-welcome">
+            
             <h1>Welcome to MyPatientHUB!</h1>
             <p>Your healthcare overview at a glance.</p>
           </section>

@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
+import Header from "./Header";
+
 
 function DoctorList() {
   return (
@@ -11,8 +13,9 @@ function DoctorList() {
       <Sidebar />
 
       <main className="content">
-
+     <Header/>
         <section className="doctor-banner">
+           
           <h1>Doctor List</h1>
           <p>Find the right doctor for your healthcare needs.</p>
         </section>
