@@ -462,6 +462,8 @@
     color: #35445a;
 }
 
+
+
 /* Responsive design */
 
 @media (max-width: 768px) {
@@ -561,3 +563,228 @@
     }
 }
 
+/* ==========================================
+   Login, My Account & Settings - Dark Mode
+   ========================================== */
+
+/* Account page background */
+html[data-theme="dark"] .account-layout {
+    background: #0b1220 !important;
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] .account-main {
+    background: #0b1220;
+}
+
+html[data-theme="dark"] .account-container {
+    color: #e5e7eb;
+}
+
+/* Login form */
+html[data-theme="dark"] .login-card {
+    background: #111c30 !important;
+    color: #e5e7eb;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .login-card h1,
+html[data-theme="dark"] .login-card h2,
+html[data-theme="dark"] .login-card label {
+    color: #f1f5f9;
+}
+
+html[data-theme="dark"] .login-card form input {
+    background: #1e293b;
+    color: #f1f5f9;
+    border-color: #475569;
+}
+
+html[data-theme="dark"] .login-card form input::placeholder {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .auth-message {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+html[data-theme="dark"] .auth-switch {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .auth-switch button {
+    color: #93c5fd;
+}
+
+/* Page headings */
+html[data-theme="dark"] .account-page-heading h1 {
+    color: #f1f5f9;
+}
+
+html[data-theme="dark"] .account-page-heading p {
+    color: #a5b4cc;
+}
+
+html[data-theme="dark"] .account-eyebrow {
+    color: #93c5fd;
+}
+
+/* Shared account cards */
+html[data-theme="dark"] .account-card {
+    background: #111c30 !important;
+    color: #e5e7eb;
+    border-color: #334155;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .account-section-heading h2 {
+    color: #f1f5f9;
+}
+
+html[data-theme="dark"] .account-section-heading p {
+    color: #a5b4cc;
+}
+
+/* Profile summary */
+html[data-theme="dark"] .profile-avatar {
+    background: #1e3a5f;
+    color: #bfdbfe;
+}
+
+html[data-theme="dark"] .profile-summary-info h2 {
+    color: #f1f5f9;
+}
+
+html[data-theme="dark"] .profile-summary-info > p {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .profile-status {
+    background: #153b2b;
+    color: #86efac;
+}
+
+/* Form labels and values */
+html[data-theme="dark"] .account-field label {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .account-field-value {
+    color: #e2e8f0;
+}
+
+/* Input fields and dropdowns */
+html[data-theme="dark"] .account-field input,
+html[data-theme="dark"] .account-field select,
+html[data-theme="dark"] .login-card form input {
+    background: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #475569 !important;
+}
+
+html[data-theme="dark"] .account-field input::placeholder {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .account-field input:focus,
+html[data-theme="dark"] .account-field select:focus {
+    border-color: #818cf8 !important;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+html[data-theme="dark"] .account-field select option {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+/* Account buttons */
+html[data-theme="dark"] .account-primary-button {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .account-primary-button:hover {
+    background: #4338ca;
+}
+
+html[data-theme="dark"] .account-secondary-button {
+    background: #1e293b;
+    color: #e2e8f0;
+    border-color: #475569;
+}
+
+html[data-theme="dark"] .account-secondary-button:hover {
+    background: #334155;
+    border-color: #64748b;
+}
+
+/* Success message */
+html[data-theme="dark"] .account-message:not(.error) {
+    background: #153b2b;
+    color: #bbf7d0;
+    border-color: #286749;
+}
+
+/* Error message */
+html[data-theme="dark"] .account-message.error {
+    background: #451a1a !important;
+    color: #fecaca !important;
+    border-color: #7f1d1d !important;
+    border-left-color: #ef4444 !important;
+}
+
+/* Privacy disclaimer */
+html[data-theme="dark"] .account-disclaimer {
+    background: #292719;
+    border-color: #66552b;
+}
+
+html[data-theme="dark"] .account-disclaimer strong {
+    color: #fde68a;
+}
+
+html[data-theme="dark"] .account-disclaimer p {
+    color: #e5d8b5;
+}
+
+/* Settings section */
+html[data-theme="dark"] .settings-section-icon {
+    background: #1e3a5f;
+    color: #bfdbfe;
+}
+
+html[data-theme="dark"] .settings-option {
+    border-top-color: #334155;
+}
+
+html[data-theme="dark"] .settings-option-text h3 {
+    color: #f1f5f9;
+}
+
+html[data-theme="dark"] .settings-option-text p {
+    color: #a5b4cc;
+}
+
+/* Settings toggle switch */
+html[data-theme="dark"] .settings-slider {
+    background: #475569;
+}
+
+html[data-theme="dark"] .settings-switch input:checked + .settings-slider {
+    background: #6366f1;
+}
+
+html[data-theme="dark"] .settings-slider::before {
+    background: #f8fafc;
+}
+
+/* Settings note */
+html[data-theme="dark"] .settings-note {
+    background: #172338;
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .settings-note strong {
+    color: #f1f5f9;
+}

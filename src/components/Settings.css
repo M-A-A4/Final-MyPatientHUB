@@ -987,3 +987,225 @@
     width: 100%;
   }
 }
+
+
+/* ==========================================
+   SETTINGS PAGE — DARK MODE
+========================================== */
+
+html[data-theme="dark"] .settings-dashboard,
+html[data-theme="dark"] .settings-content {
+    background: #0b1220 !important;
+    color: #e5e7eb;
+}
+
+/* Header and breadcrumb */
+html[data-theme="dark"] .settings-topbar {
+    background: rgba(17, 28, 48, 0.97) !important;
+    color: #e5e7eb;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .settings-breadcrumb,
+html[data-theme="dark"] .settings-breadcrumb strong,
+html[data-theme="dark"] .settings-menu-toggle,
+html[data-theme="dark"] .settings-icon-button,
+html[data-theme="dark"] .settings-logout {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .settings-breadcrumb .breadcrumb-home,
+html[data-theme="dark"] .settings-breadcrumb .breadcrumb-divider {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .settings-menu-toggle:hover,
+html[data-theme="dark"] .settings-icon-button:hover {
+    background: #263449 !important;
+    color: #f0abfc !important;
+}
+
+/* Search */
+html[data-theme="dark"] .settings-search {
+    background: #1e293b !important;
+    border-color: #475569 !important;
+}
+
+html[data-theme="dark"] .settings-search,
+html[data-theme="dark"] .settings-search i {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .settings-search input {
+    background: transparent !important;
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .settings-search input::placeholder {
+    color: #94a3b8;
+}
+
+/* Left navigation */
+html[data-theme="dark"] .settings-navigation {
+    background: #111c30 !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+    scrollbar-color: #475569 transparent;
+}
+
+html[data-theme="dark"] .settings-nav-item {
+    background: #111c30 !important;
+    color: #cbd5e1 !important;
+    border-color: transparent;
+}
+
+html[data-theme="dark"] .settings-nav-item i {
+    color: #a5b4fc !important;
+}
+
+html[data-theme="dark"] .settings-nav-item:hover {
+    background: #263449 !important;
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .settings-nav-item.active {
+    background: #263449 !important;
+    color: #ffffff !important;
+    border-color: #475569;
+}
+
+/* Profile and content cards */
+html[data-theme="dark"] .settings-profile-card,
+html[data-theme="dark"] .settings-card {
+    background: #111c30 !important;
+    color: #e5e7eb !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .settings-profile-name h2,
+html[data-theme="dark"] .settings-card h2,
+html[data-theme="dark"] .password-requirements h3,
+html[data-theme="dark"] .delete-confirm strong {
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .settings-profile-name p,
+html[data-theme="dark"] .visibility-control,
+html[data-theme="dark"] .settings-option-row,
+html[data-theme="dark"] .settings-twofactor-toggle,
+html[data-theme="dark"] .password-requirements p,
+html[data-theme="dark"] .password-requirements ul,
+html[data-theme="dark"] .settings-card-description,
+html[data-theme="dark"] .session-device-info {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .settings-avatar {
+    background: #263449;
+}
+
+/* Form fields */
+html[data-theme="dark"] .settings-field label {
+    color: #dbeafe !important;
+}
+
+html[data-theme="dark"] .settings-field input,
+html[data-theme="dark"] .settings-field select {
+    background: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #475569 !important;
+}
+
+html[data-theme="dark"] .settings-field input::placeholder {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .settings-field input:hover,
+html[data-theme="dark"] .settings-field select:hover {
+    background: #263449 !important;
+    border-color: #64748b !important;
+}
+
+html[data-theme="dark"] .settings-field input:focus,
+html[data-theme="dark"] .settings-field select:focus {
+    background: #1e293b !important;
+    border-color: #818cf8 !important;
+}
+
+html[data-theme="dark"] .settings-field select option {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+/* Security status */
+html[data-theme="dark"] .status-enabled {
+    background: #193b2b !important;
+    color: #86efac !important;
+}
+
+html[data-theme="dark"] .status-disabled {
+    background: #493719 !important;
+    color: #fde68a !important;
+}
+
+/* Dividers and session rows */
+html[data-theme="dark"] .settings-option-row,
+html[data-theme="dark"] .settings-session-row {
+    border-bottom-color: #334155 !important;
+}
+
+html[data-theme="dark"] .settings-session-row:hover {
+    background: #172338 !important;
+}
+
+html[data-theme="dark"] .session-device-info small,
+html[data-theme="dark"] .session-meta,
+html[data-theme="dark"] .delete-confirm small {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .session-device-icon {
+    color: #a5b4fc !important;
+}
+
+/* Secondary buttons */
+html[data-theme="dark"] .settings-outline-button {
+    background: #1e293b !important;
+    color: #c7d2fe !important;
+    border-color: #64748b !important;
+}
+
+html[data-theme="dark"] .settings-outline-button:hover {
+    background: #263449 !important;
+    color: #ffffff !important;
+    border-color: #818cf8 !important;
+}
+
+/* Toggle controls */
+html[data-theme="dark"] .visibility-slider,
+html[data-theme="dark"] .settings-toggle {
+    background: #475569;
+}
+
+html[data-theme="dark"] .visibility-control input:checked + .visibility-slider,
+html[data-theme="dark"] .delete-confirm input:checked + .visibility-slider,
+html[data-theme="dark"] .settings-toggle.on {
+    background: #6366f1;
+}
+
+/* Links and delete-account section */
+html[data-theme="dark"] .session-see-more {
+    color: #7dd3fc !important;
+}
+
+html[data-theme="dark"] .session-remove {
+    color: #fca5a5 !important;
+}
+
+html[data-theme="dark"] .settings-delete-card {
+    border: 1px solid #334155;
+}
+
+/* Keyboard focus */
+html[data-theme="dark"] .settings-dashboard button:focus-visible {
+    outline-color: rgba(129, 140, 248, 0.65);
+}

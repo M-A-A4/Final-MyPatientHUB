@@ -9,8 +9,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import Sidebar from "./Sidebar";
-import Header from "./Header";
+
 import Footer from "./Footer";
 
 import "./Discovery.css";
@@ -79,7 +78,7 @@ const doctors = [
     location: "Kabul, Afghanistan",
     rating: "4.9",
     fee: "$25",
-    image: "/images/azam.jpg",
+    image: "/images/d2.jpg",
   },
   {
     id: 5,
@@ -89,7 +88,7 @@ const doctors = [
     location: "Kabul, Afghanistan",
     rating: "4.6",
     fee: "$32",
-    image: "/images/d2.jpg",
+    image: "/images/d3.jpg",
   },
 ];
 
@@ -199,15 +198,9 @@ function FindDoctor() {
     navigate(`/doctorlist${search}`);
   }
 
+  
   return (
-    <div className="dashboard-container">
-      <Sidebar />
-
-      <main className="content">
-      
- 
-        <div className="discovery-page">
-          <Header />
+  <div className="discovery-page">
           
           {/* Hero section and search */}
           <section className="discovery-hero">
@@ -349,11 +342,8 @@ function FindDoctor() {
               </button>
             </div>
           )}
-        </div>
-
-        <Footer />
-      </main>
-
+      <Footer />
+  
       {/* Show the modal only when a doctor has been selected */}
       {booking && (
         <BookingModal

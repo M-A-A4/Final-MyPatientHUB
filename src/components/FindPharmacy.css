@@ -323,3 +323,71 @@
         overflow-x:auto;
     }
 }
+
+/* =========================
+   PHARMACY DARK MODE
+========================= */
+
+html[data-theme="dark"] .pharmacy-page {
+    background: #0b1220 !important;
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] .pharmacy-main {
+    background: #0b1220;
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] .pharmacy-page .topbar,
+html[data-theme="dark"] .pharmacy-page .pharmacy-card,
+html[data-theme="dark"] .pharmacy-page .pharmacy-table-section {
+    background: #111c30 !important;
+    color: #e5e7eb !important;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .pharmacy-page .pharmacy-title h1,
+html[data-theme="dark"] .pharmacy-page .pharmacy-table-section h2,
+html[data-theme="dark"] .pharmacy-page .pharmacy-info h4 {
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .pharmacy-page .pharmacy-card p,
+html[data-theme="dark"] .pharmacy-page .pharmacy-info p,
+html[data-theme="dark"] .pharmacy-page .entries-control span {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .pharmacy-page .top-actions input,
+html[data-theme="dark"] .pharmacy-page .entries-control select,
+html[data-theme="dark"] .pharmacy-page .table-search {
+    background: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #475569 !important;
+}
+
+html[data-theme="dark"] .pharmacy-page .top-actions input::placeholder,
+html[data-theme="dark"] .pharmacy-page .table-search::placeholder {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .pharmacy-page .pharmacy-table th {
+    background: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .pharmacy-page .pharmacy-table td {
+    background: #111c30;
+    color: #e5e7eb;
+    border-bottom-color: #334155;
+}
+
+html[data-theme="dark"] .pharmacy-page .pharmacy-table tr:hover td {
+    background: #1e293b !important;
+}
+
+html[data-theme="dark"] .pharmacy-page .pharmacy-logo,
+html[data-theme="dark"] .pharmacy-page .service-img {
+    border-color: #475569;
+}

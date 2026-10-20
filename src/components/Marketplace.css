@@ -210,3 +210,80 @@ button .buy-btn{
         width:100%;
     }
 }
+
+
+/* =========================
+   MARKETPLACE DARK MODE
+========================= */
+
+html[data-theme="dark"] .marketplace-page {
+    background: #0b1220 !important;
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] .marketplace-main {
+    background: #0b1220;
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] .marketplace-header,
+html[data-theme="dark"] .marketplace-card,
+html[data-theme="dark"] .marketplace-table-section {
+    background: #111c30 !important;
+    color: #e5e7eb !important;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .marketplace-title h1,
+html[data-theme="dark"] .marketplace-card-info,
+html[data-theme="dark"] .marketplace-card-info h3,
+html[data-theme="dark"] .marketplace-card-info p,
+html[data-theme="dark"] .marketplace-card-top {
+    color: #e5e7eb;
+}
+
+html[data-theme="dark"] .marketplace-table-section h2 {
+    color: #a5b4fc !important;
+}
+
+html[data-theme="dark"] .marketplace-search input,
+html[data-theme="dark"] .marketplace-page .entries-control select {
+    background: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #475569 !important;
+}
+
+html[data-theme="dark"] .marketplace-search input::placeholder {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .marketplace-page .entries-control span {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .marketplace-table {
+    background: #111c30;
+}
+
+html[data-theme="dark"] .marketplace-table th {
+    background: #3730a3 !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .marketplace-table td {
+    background: #111c30;
+    color: #e5e7eb;
+    border-bottom-color: #334155;
+}
+
+html[data-theme="dark"] .marketplace-table tr:nth-child(even) td {
+    background: #172338;
+}
+
+html[data-theme="dark"] .marketplace-table tr:hover td {
+    background: #263449 !important;
+}
+
+html[data-theme="dark"] .marketplace-page .product-img {
+    border-color: #475569;
+}

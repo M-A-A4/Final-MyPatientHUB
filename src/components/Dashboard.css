@@ -636,3 +636,87 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ==========================================
+   DARK MODE - DASHBOARD
+   Uses the actual theme set by Header.js
+   ========================================== */
+
+html[data-theme="dark"] .dh-dashboard {
+  --dh-background: #0b1220;
+  --dh-border: #29364b;
+  background: var(--dh-background);
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .dh-dashboard .content.dh-content {
+  background: var(--dh-background);
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-card {
+  background: #111c30;
+  color: #e5e7eb;
+  border-color: #29364b;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-card h3,
+html[data-theme="dark"] .dh-dashboard .dh-index-number,
+html[data-theme="dark"] .dh-dashboard .dh-trend-value,
+html[data-theme="dark"] .dh-dashboard .dh-doctor-info strong {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-legend-name,
+html[data-theme="dark"] .dh-dashboard .dh-legend-value,
+html[data-theme="dark"] .dh-dashboard .dh-muted,
+html[data-theme="dark"] .dh-dashboard .dh-doctor-info span,
+html[data-theme="dark"] .dh-dashboard .dh-appointment-date {
+  color: #bdc8da;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-legend-row,
+html[data-theme="dark"] .dh-dashboard .dh-appointment-row {
+  border-color: #29364b;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-info-button {
+  background: #1e293b;
+  color: #cbd5e1;
+  border-color: #475569;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-period-switch {
+  background: #243650;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-period-switch button {
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-period-switch button.active {
+  background: #475569;
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-map-card iframe {
+  background: #1e293b;
+}
+
+html[data-theme="dark"] .dh-dashboard .recharts-legend-item-text {
+  fill: #cbd5e1;
+}
+
+html[data-theme="dark"] .dh-dashboard .recharts-default-tooltip {
+  background: #111c30 !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme="dark"] .dh-dashboard .footer {
+  background: #111c30;
+  color: #cbd5e1;
+  border-color: #29364b;
+}
+
+

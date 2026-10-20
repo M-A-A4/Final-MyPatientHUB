@@ -261,7 +261,9 @@ function Login() {
               )}
             </div>
           </div>
-          <div className="about-section">
+         </div>
+      </section>
+        <div className="about-section">
         <h2>About MyPatientHUB</h2>
 
         <p>
@@ -274,8 +276,7 @@ function Login() {
           and more accessible through technology.
         </p>
       </div>
-        </div>
-      </section>
+       
 
      
 

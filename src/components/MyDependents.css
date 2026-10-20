@@ -373,3 +373,138 @@
     line-height: 13px;
   }
 }
+
+
+/* ==========================================
+   MY DEPENDENTS — DARK MODE
+========================================== */
+
+html[data-theme="dark"] .dependents-page {
+    background: #0b1220 !important;
+    color: #e5e7eb;
+}
+
+/* Page title */
+html[data-theme="dark"] .dependents-title h1 {
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .dependents-title p {
+    color: #a5b4cc !important;
+}
+
+/* Progress indicator */
+html[data-theme="dark"] .progress-circle {
+    background: #1e293b;
+    border-color: #475569;
+}
+
+html[data-theme="dark"] .progress-circle.active {
+    background: #818cf8;
+    border-color: #818cf8;
+}
+
+html[data-theme="dark"] .progress-step span {
+    color: #64748b;
+}
+
+html[data-theme="dark"] .progress-step .step-active-text {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .progress-line {
+    background: #334155;
+}
+
+html[data-theme="dark"] .progress-line.progress-active {
+    background: #818cf8;
+}
+
+/* Basic information card */
+html[data-theme="dark"] .dependent-card,
+html[data-theme="dark"] .family-plan-card {
+    background: #111c30 !important;
+    color: #e5e7eb;
+    border: 1px solid #334155;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .dependent-card-header h2 {
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .dependent-card-header p {
+    color: #a5b4cc !important;
+}
+
+/* Form labels and fields */
+html[data-theme="dark"] .form-group label {
+    color: #dbeafe !important;
+}
+
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select,
+html[data-theme="dark"] .birth-date-row select {
+    background: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #475569 !important;
+}
+
+html[data-theme="dark"] .form-group input::placeholder {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .form-group input:focus,
+html[data-theme="dark"] .form-group select:focus,
+html[data-theme="dark"] .birth-date-row select:focus {
+    border-color: #818cf8 !important;
+    box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.15);
+}
+
+/* Navigation buttons */
+html[data-theme="dark"] .back-button {
+    background: #334155;
+    color: #f1f5f9;
+}
+
+html[data-theme="dark"] .back-button:hover {
+    background: #475569;
+}
+
+html[data-theme="dark"] .next-button,
+html[data-theme="dark"] .send-button {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .next-button:hover,
+html[data-theme="dark"] .send-button:hover {
+    background: #4338ca;
+}
+
+/* Family care plan boxes */
+html[data-theme="dark"] .plan-box {
+    background: #172338 !important;
+    color: #e5e7eb;
+    border: 1px solid #334155;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .plan-box h2 {
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .plan-box p {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .plan-divider {
+    background: #334155;
+}
+
+/* Improve select option readability where supported */
+html[data-theme="dark"] .form-group select option,
+html[data-theme="dark"] .birth-date-row select option {
+    background: #1e293b;
+    color: #f1f5f9;
+}

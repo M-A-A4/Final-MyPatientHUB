@@ -692,3 +692,148 @@ iframe {
 [data-theme="dark"] .discovery-page .clinic-card,
 [data-theme="dark"] .discovery-page .doctor-card,
 [data-theme="dark"] .discovery-page .map-container { background:var(--surface,#1f2937); color:var(--text,#e5e7eb); }
+
+
+
+/* ==========================================
+   GLOBAL DARK MODE FIX
+   Theme controlled by Header.js
+   ========================================== */
+
+html[data-theme="dark"] body {
+  background: #0b1220 !important;
+  color: #e5e7eb;
+}
+
+/* Shared application layout */
+html[data-theme="dark"] .dashboard-container,
+html[data-theme="dark"] .app-layout,
+html[data-theme="dark"] .app-main,
+html[data-theme="dark"] .app-page-content,
+html[data-theme="dark"] .content {
+  background-color: #0b1220;
+  color: #e5e7eb;
+}
+
+/* Shared footer */
+html[data-theme="dark"] .footer {
+  background: #111c30 !important;
+  color: #e5e7eb !important;
+  border-top-color: #334155 !important;
+}
+
+html[data-theme="dark"] .footer a,
+html[data-theme="dark"] .footer-links a {
+  color: #a5b4fc !important;
+}
+
+/* Doctor and clinic content */
+html[data-theme="dark"] .service-section,
+html[data-theme="dark"] .doctor-card,
+html[data-theme="dark"] .map-container,
+html[data-theme="dark"] .clinic-card,
+html[data-theme="dark"] .clinic-filters {
+  background: #111c30 !important;
+  color: #e5e7eb !important;
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .service-card {
+  background: #1e293b !important;
+  color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .doctor-info h3,
+html[data-theme="dark"] .clinic-info h3,
+html[data-theme="dark"] .clinic-filters h4,
+html[data-theme="dark"] .service-section h2 {
+  color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .doctor-info p,
+html[data-theme="dark"] .clinic-info p,
+html[data-theme="dark"] .clinic-filters p {
+  color: #cbd5e1 !important;
+}
+
+/* Dashboard cards */
+html[data-theme="dark"] .dh-dashboard {
+  --dh-background: #0b1220;
+  background: #0b1220 !important;
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-card {
+  background: #111c30 !important;
+  color: #e5e7eb !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme="dark"] .dh-dashboard .dh-card h3,
+html[data-theme="dark"] .dh-dashboard .dh-doctor-info strong,
+html[data-theme="dark"] .dh-dashboard .dh-index-number,
+html[data-theme="dark"] .dh-dashboard .dh-trend-value {
+  color: #f1f5f9 !important;
+}
+
+/* Form controls */
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Marketplace common containers and tables */
+html[data-theme="dark"] .marketplace-page,
+html[data-theme="dark"] .marketplace-page .content,
+html[data-theme="dark"] .marketplace-page .app-page-content {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .marketplace-page table,
+html[data-theme="dark"] .marketplace-page th,
+html[data-theme="dark"] .marketplace-page td {
+  background-color: #111c30;
+  color: #e5e7eb;
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .marketplace-page th {
+  background-color: #1e293b;
+}
+
+/* Fix About section on Login page in Dark Mode */
+html[data-theme="dark"] .about-section {
+    background: #111c30 !important;
+    color: #e5e7eb !important;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .about-section h2,
+html[data-theme="dark"] .about-section h3 {
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .about-section p {
+    color: #cbd5e1 !important;
+}
+
+/* Keep the footer dark and readable */
+html[data-theme="dark"] .footer {
+    background: #0b1220 !important;
+    color: #e5e7eb !important;
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .footer a {
+    color: #a5b4fc !important;
+}
+
