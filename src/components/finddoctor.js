@@ -58,6 +58,15 @@ function FindDoctor() {
               </Link>
             </div>
 
+             <div className="service-card specialty-card">
+              <i className="fa-solid fa-heart-pulse"></i>
+              <h3>Dentist</h3>
+
+              <Link to="/doctormap" className="arrow-link">
+                <i className="fa-solid fa-arrow-right"></i>
+              </Link>
+            </div>
+
             <div className="service-card specialty-card">
               <i className="fa-solid fa-brain"></i>
               <h3>Neurology</h3>
