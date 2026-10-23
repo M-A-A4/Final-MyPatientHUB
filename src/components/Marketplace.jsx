@@ -168,6 +168,14 @@ function Marketplace() {
 
           <h2>Other Results</h2>
 
+          <input
+              type="text"
+              placeholder="Search..."
+              className="table-search"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+          />
+
           <div className="entries-control">
 
             <select

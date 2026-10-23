@@ -23,12 +23,12 @@ function FindPharmacy() {
       price: "9 RM",
             image1: process.env.PUBLIC_URL + "/images/drug2.png",
     },
-    {
-      pharmacy: "OK Pharmacy",
-      image: process.env.PUBLIC_URL + "/images/ph3.jpg",
-      price: "8 RM",
-            image1: process.env.PUBLIC_URL + "/images/drug.png",      image: process.env.PUBLIC_URL + "/images/drug3.png",
-    },
+   {
+  pharmacy: "OK Pharmacy",
+  image: process.env.PUBLIC_URL + "/images/ph3.jpg",
+  price: "8 RM",
+  image1: process.env.PUBLIC_URL + "/images/drug4.png",
+},
     {
       pharmacy: "Hamza Pharma",
       image: process.env.PUBLIC_URL + "/images/ph4.jpg",
