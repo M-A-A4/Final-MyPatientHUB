@@ -218,9 +218,9 @@
 
 /* Hover icon */
 
-.sidebar .sidebar-link:hover .sidebar-icon {
+/* .sidebar .sidebar-link:hover .sidebar-icon {
   color: var(--sidebar-purple);
-}
+} */
 
 .sidebar .sidebar-link.active:hover .sidebar-icon {
   color: #ffffff;

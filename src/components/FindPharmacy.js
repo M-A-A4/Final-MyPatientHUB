@@ -25,20 +25,14 @@ function FindPharmacy() {
       image: process.env.PUBLIC_URL + "/images/ph2.jpg",
       price: "9 RM",
     },
-<<<<<<< HEAD:src/components/FindPharmacy.js
-    {
-      pharmacy: "OK Pharmacy",
-      image: process.env.PUBLIC_URL + "/images/ph3.jpg",
-      price: "8 RM",
-    },
-=======
+
    {
   pharmacy: "OK Pharmacy",
   image: process.env.PUBLIC_URL + "/images/ph3.jpg",
   price: "8 RM",
   image1: process.env.PUBLIC_URL + "/images/drug4.png",
 },
->>>>>>> e71fc69 (Update pharmacy, header, and marketplace components):src/components/FindPharmacy.jsx
+
     {
       pharmacy: "Hamza Pharma",
       image: process.env.PUBLIC_URL + "/images/ph4.jpg",
